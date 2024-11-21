@@ -18,11 +18,6 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname, 'views', 'index.html');
 });
 
-// Homepage (login or register)
-app.get('/home', (req, res) => {
-    res.render('index');
-});
-
 // Login page
 app.get('/login', (req, res) => {
     res.render('login');
