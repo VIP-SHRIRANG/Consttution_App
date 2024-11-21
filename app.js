@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 
 // Get started
 app.get('/', (req, res) => {
-    res.render('getStarted');
+    res.sendFile(__dirname, 'views', 'index.html');
 });
 
 // Homepage (login or register)
