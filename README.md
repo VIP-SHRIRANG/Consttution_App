@@ -1,7 +1,7 @@
 # Constitution App
 
 ## Tech Stack
-- React
+- HTML, ejs
 - Node.js
 - Express
 - MongoDB
@@ -22,5 +22,5 @@
 1. Clone the repository: `git clone https://github.com/VIP-SHRIRANG/Consttution_App`
 2. Navigate to the project directory: `cd Consttution_App`
 3. Install dependencies: `npm install`
-4. Run the application: `npm start`
-5. Visit `http://localhost:3000` in your browser.
+4. Run the application: `node app.js`
+5. Visit `http://localhost:3005` in your browser.
