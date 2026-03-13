@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindYourLaw.com — Select Your Approach</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <style>
+        /* ─── Variables ──────────────────────────────── */
+        :root {
+            --bg:         #0b0d11;
+            --bg-2:       #10131a;
+            --surface:    rgba(255,255,255,0.035);
+            --surface-h:  rgba(255,255,255,0.06);
+            --border:     rgba(255,255,255,0.07);
+            --border-h:   rgba(201,169,110,0.4);
+            --gold:       #c9a96e;
+            --gold-light: #e2c98a;
+            --text:       #ede7db;
+            --text-muted: rgba(237,231,219,0.45);
+            --nav-bg:     rgba(11,13,17,0.92);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { font-size: 16px; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 300;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* ─── Background ─────────────────────────────── */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 50% at 50% -5%, rgba(201,169,110,0.09) 0%, transparent 65%),
+                radial-gradient(ellipse 35% 30% at 90% 95%, rgba(122,40,40,0.06) 0%, transparent 55%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ─── Header ─────────────────────────────────── */
+        .header-container {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--nav-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 2.5rem;
+            height: 64px;
+            z-index: 1000;
+        }
+
+        .header-container::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), transparent);
+            opacity: 0.4;
+        }
+
+        .logo h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            color: var(--text);
+        }
+
+        .logo h2::first-letter { color: var(--gold); }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.1rem;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.78rem;
+            font-weight: 400;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            padding: 0.4rem 0.85rem;
+            border-radius: 4px;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+            background: rgba(255,255,255,0.05);
+        }
+
+        /* ─── Main Layout ────────────────────────────── */
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 1.5rem 90px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ─── Page Header ────────────────────────────── */
+        .header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+            animation: riseIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        @keyframes riseIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Eyebrow */
+        .header::before {
+            content: '— Select Your Approach —';
+            display: block;
+            font-size: 0.68rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0.7;
+            margin-bottom: 1.25rem;
+        }
+
+        .header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 300;
+            font-style: italic;
+            color: var(--text);
+            line-height: 1.15;
+            margin-bottom: 1.25rem;
+        }
+
+        .header h2 {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            opacity: 0.7;
+        }
+
+        /* Gold divider replacing <hr> */
+        .header-rule {
+            width: 2.5rem;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            border: none;
+            margin: 1.1rem auto;
+            border-radius: 2px;
+        }
+
+        /* ─── Cards Grid ─────────────────────────────── */
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            width: 100%;
+            max-width: 640px;
+            animation: riseIn 0.8s 0.15s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        /* ─── Individual Card ────────────────────────── */
+        .section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2.25rem 1.75rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1.25rem;
+            transition: border-color 0.25s, background 0.25s, transform 0.2s, box-shadow 0.25s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .section:hover {
+            border-color: var(--border-h);
+            background: rgba(201,169,110,0.06);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 36px rgba(0,0,0,0.3);
+        }
+
+        .section:hover::before { opacity: 1; }
+
+        /* Card Icon */
+        .card-icon {
+            width: 56px;
+            height: 56px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: rgba(201,169,110,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            transition: border-color 0.25s, background 0.25s;
+        }
+
+        .section:hover .card-icon {
+            border-color: var(--border-h);
+            background: rgba(201,169,110,0.14);
+        }
+
+        /* Card description */
+        .section p {
+            font-size: 0.85rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+            max-width: 22ch;
+        }
+
+        /* ─── Buttons ────────────────────────────────── */
+        .btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: #0b0d11;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.8rem 1.5rem;
+            transition: transform 0.15s, box-shadow 0.2s, opacity 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(201,169,110,0.28);
+        }
+
+        .btn:active { transform: translateY(0); }
+
+        /* Professional card — outlined button variant */
+        .section.professional .btn {
+            background: transparent;
+            color: var(--gold);
+            border: 1px solid rgba(201,169,110,0.4);
+        }
+
+        .section.professional .btn:hover {
+            background: rgba(201,169,110,0.1);
+            box-shadow: none;
+        }
+
+        .section.professional:hover .btn {
+            background: rgba(201,169,110,0.12);
+        }
+
+        /* Make entire card clickable via anchor */
+        .section a {
+            text-decoration: none;
+            display: contents;
+        }
+
+        /* ─── Footer ─────────────────────────────────── */
+        .footer {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: var(--nav-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-top: 1px solid var(--border);
+            padding: 0.7rem 2rem;
+            text-align: center;
+            z-index: 100;
+        }
+
+        .footer p {
+            font-size: 0.74rem;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+            opacity: 0.6;
+        }
+
+        /* ─── Responsive ─────────────────────────────── */
+        @media (max-width: 580px) {
+            .header-container { padding: 0 1.25rem; }
+            .nav-links a { font-size: 0.72rem; padding: 0.35rem 0.5rem; }
+            .cards { grid-template-columns: 1fr; max-width: 340px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── Header ─────────────────────────────── -->
+    <header class="header-container">
+        <div class="logo">
+            <h2>FindYourLaw.com</h2>
+        </div>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/aboutus">About</a>
+            <a href="/contactus">Contact Us</a>
+            <a href="/help">Help</a>
+        </nav>
+    </header>
+
+    <!-- ── Main ───────────────────────────────── -->
+    <div class="container">
+
+        <div class="header">
+            <h1>Welcome to FindYourLaw.com</h1>
+            <hr class="header-rule">
+            <h2>Who are you?</h2>
+        </div>
+
+        <div class="cards">
+
+            <!-- Simple Person -->
+            <div class="section simple-person" onclick="window.location.href='/simple'" role="button" tabindex="0">
+                <div class="card-icon">👤</div>
+                <button class="btn" type="button" onclick="event.stopPropagation(); window.location.href='/simple'">
+                    Simple Person
+                </button>
+                <p>For individuals looking for basic, plain-language legal information.</p>
+            </div>
+
+            <!-- Professional -->
+            <div class="section professional" onclick="window.location.href='/professional'" role="button" tabindex="0">
+                <div class="card-icon">⚖️</div>
+                <form action="/professional" method="get" style="width:100%">
+                    <button class="btn" type="submit">Professional</button>
+                </form>
+                <p>For professionals seeking detailed or specialized legal content.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ── Footer ─────────────────────────────── -->
+    <footer class="footer">
+        <p>© 2024 FindYourLaw.com — All Rights Reserved &nbsp;|&nbsp; Made with ❤️ in India</p>
+    </footer>
+
+</body>
+</html>

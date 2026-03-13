@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindYourLaw.com — Know Your Rights</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* ─── Variables ──────────────────────────────── */
+        :root {
+            --bg:         #0b0d11;
+            --surface:    rgba(255,255,255,0.035);
+            --surface-2:  rgba(255,255,255,0.06);
+            --border:     rgba(255,255,255,0.07);
+            --border-h:   rgba(201,169,110,0.4);
+            --gold:       #c9a96e;
+            --gold-light: #e2c98a;
+            --text:       #ede7db;
+            --text-muted: rgba(237,231,219,0.45);
+            --nav-bg:     rgba(11,13,17,0.85);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 300;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* ─── Background ─────────────────────────────── */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 50% 10%, rgba(201,169,110,0.1) 0%, transparent 60%),
+                radial-gradient(ellipse 40% 35% at 10% 80%, rgba(122,40,40,0.07) 0%, transparent 55%),
+                radial-gradient(ellipse 35% 30% at 90% 85%, rgba(201,169,110,0.05) 0%, transparent 55%);
+            pointer-events: none;
+            z-index: 0;
+            animation: ambientShift 12s ease-in-out infinite alternate;
+        }
+
+        @keyframes ambientShift {
+            from { opacity: 0.7; }
+            to   { opacity: 1; }
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ─── Navbar ─────────────────────────────────── */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--nav-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 2.5rem;
+            height: 64px;
+            z-index: 1000;
+        }
+
+        .navbar::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), transparent);
+            opacity: 0.45;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .logo::first-letter { color: var(--gold); }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 0.1rem;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.78rem;
+            font-weight: 400;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            padding: 0.4rem 0.85rem;
+            border-radius: 4px;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+            background: rgba(255,255,255,0.05);
+        }
+
+        /* ─── Hero ───────────────────────────────────── */
+        .hero-section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 100px 2rem 90px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Big watermark text */
+        .hero-section::before {
+            content: 'LAW';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(12rem, 30vw, 22rem);
+            font-weight: 700;
+            color: rgba(201,169,110,0.03);
+            letter-spacing: 0.15em;
+            pointer-events: none;
+            user-select: none;
+            white-space: nowrap;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 720px;
+            animation: heroIn 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        @keyframes heroIn {
+            from { opacity: 0; transform: translateY(32px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Eyebrow */
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.68rem;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0.75;
+            margin-bottom: 2rem;
+            animation: heroIn 1s 0.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        .hero-eyebrow::before,
+        .hero-eyebrow::after {
+            content: '';
+            display: inline-block;
+            width: 28px;
+            height: 1px;
+            background: var(--gold);
+            opacity: 0.5;
+        }
+
+        /* Headline */
+        h1 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: clamp(2.8rem, 7vw, 5.5rem);
+            font-weight: 300;
+            font-style: italic;
+            line-height: 1.08;
+            letter-spacing: -0.01em;
+            color: var(--text);
+            margin-bottom: 1.75rem;
+            animation: heroIn 1s 0.15s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        h1 em {
+            font-style: normal;
+            font-weight: 600;
+            color: var(--gold);
+        }
+
+        /* Subtext */
+        .hero-subtext {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+            max-width: 50ch;
+            margin: 0 auto 3rem;
+            animation: heroIn 1s 0.22s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        /* ─── CTA Buttons ────────────────────────────── */
+        .cta-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            animation: heroIn 1s 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #0b0d11;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            padding: 0.9rem 2.25rem;
+            border-radius: 4px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary::after { content: '→'; font-size: 0.9rem; transition: transform 0.2s; }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(201,169,110,0.3);
+        }
+
+        .btn-primary:hover::after { transform: translateX(3px); }
+        .btn-primary:active       { transform: translateY(0); }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 400;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--text-muted);
+            background: transparent;
+            border: 1px solid var(--border);
+            padding: 0.9rem 2.25rem;
+            border-radius: 4px;
+            transition: color 0.2s, border-color 0.2s, background 0.2s, transform 0.2s;
+        }
+
+        .btn-secondary:hover {
+            color: var(--text);
+            border-color: rgba(201,169,110,0.4);
+            background: rgba(255,255,255,0.04);
+            transform: translateY(-1px);
+        }
+
+        /* ─── Feature Strip ──────────────────────────── */
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 5rem;
+            flex-wrap: wrap;
+            animation: heroIn 1s 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        .feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            opacity: 0.6;
+        }
+
+        .feature-icon {
+            width: 42px;
+            height: 42px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            background: var(--surface);
+            margin-bottom: 0.2rem;
+        }
+
+        .feature-label {
+            font-size: 0.68rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        /* ─── Scroll hint ────────────────────────────── */
+        .scroll-hint {
+            position: absolute;
+            bottom: 5.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.62rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            opacity: 0.3;
+            animation: heroIn 1s 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        .scroll-hint::after {
+            content: '';
+            width: 1px;
+            height: 30px;
+            background: linear-gradient(to bottom, var(--gold), transparent);
+            animation: scrollPulse 2.2s ease-in-out infinite;
+        }
+
+        @keyframes scrollPulse {
+            0%, 100% { opacity: 0.3; }
+            50%       { opacity: 0.9; }
+        }
+
+        /* ─── Footer ─────────────────────────────────── */
+        footer {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: var(--nav-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-top: 1px solid var(--border);
+            padding: 0.7rem 2rem;
+            text-align: center;
+            z-index: 100;
+        }
+
+        footer p {
+            font-size: 0.74rem;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+            opacity: 0.6;
+        }
+
+        /* ─── Responsive ─────────────────────────────── */
+        @media (max-width: 640px) {
+            .navbar { padding: 0 1.25rem; }
+            .nav-links a { font-size: 0.72rem; padding: 0.35rem 0.5rem; }
+            h1 { font-size: 2.8rem; }
+            .features { gap: 1.75rem; }
+            .cta-buttons { flex-direction: column; align-items: stretch; }
+            .btn-primary, .btn-secondary { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── Navbar ──────────────────────────────── -->
+    <nav class="navbar">
+        <div class="logo">FindYourLaw.com</div>
+        <ul class="nav-links">
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/contactUs">Contact Us</a></li>
+            <li><a href="/chat">Help</a></li>
+        </ul>
+    </nav>
+
+    <!-- ── Hero ────────────────────────────────── -->
+    <section class="hero-section">
+
+        <div class="hero-content">
+            <p class="hero-eyebrow">Indian Legal Research Platform</p>
+
+            <h1>Know your <em>rights.</em><br>Find your law.</h1>
+
+            <p class="hero-subtext">
+                Explore laws and regulations like never before —
+                plain-language summaries of Indian legislation,
+                searchable by topic, built for every citizen.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="/login" class="btn-primary">Login</a>
+                <a href="/register" class="btn-secondary">Register</a>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">⚖️</div>
+                    <span class="feature-label">Indian Laws</span>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔍</div>
+                    <span class="feature-label">Smart Search</span>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🌐</div>
+                    <span class="feature-label">Multilingual</span>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💬</div>
+                    <span class="feature-label">Discussions</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-hint">Scroll</div>
+
+    </section>
+
+    <!-- ── Footer ──────────────────────────────── -->
+    <footer>
+        <p>© 2024 FindYourLaw.com — All Rights Reserved &nbsp;|&nbsp; Made with ❤️ in India</p>
+    </footer>
+
+</body>
+</html>

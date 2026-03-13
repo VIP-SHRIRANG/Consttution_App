@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css"> <!-- Adjust the path to your CSS file -->
+    <title><%= law.title %> - Details</title>
+    <style>
+        /* ============================================
+   LAW DETAILS — Refined Legal Aesthetic
+   Typeface: Playfair Display + Source Serif 4
+   Theme: Archival authority meets modern clarity
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,900;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ─── Variables ─────────────────────────────── */
+:root {
+  --ink:        #1a1510;
+  --ink-light:  #4a3f33;
+  --parchment:  #f7f3ec;
+  --cream:      #ede8df;
+  --gold:       #b8860b;
+  --gold-light: #d4a843;
+  --red-seal:   #8b1a1a;
+  --border:     #c9b99a;
+  --shadow:     rgba(26, 21, 16, 0.12);
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Source Serif 4', Georgia, serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  --max-width: 820px;
+  --section-gap: 3rem;
+}
+
+/* ─── Reset & Base ───────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--parchment);
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(184,134,11,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 100%, rgba(139,26,26,0.05) 0%, transparent 55%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.75;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Header ─────────────────────────────────── */
+header {
+  background-color: var(--ink);
+  background-image:
+    linear-gradient(135deg, #1a1510 60%, #2d2218 100%);
+  color: var(--parchment);
+  padding: 3.5rem 2rem 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 40px,
+      rgba(255,255,255,0.015) 40px,
+      rgba(255,255,255,0.015) 41px
+    );
+  pointer-events: none;
+}
+
+header::after {
+  content: '§';
+  position: absolute;
+  right: -0.1em;
+  bottom: -0.25em;
+  font-family: var(--font-display);
+  font-size: 14rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.025);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+header h1::before {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  margin: 0 auto 1.25rem;
+}
+
+/* ─── Main ───────────────────────────────────── */
+main {
+  flex: 1;
+  padding: 4rem 1.5rem;
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ─── Law Details Section ────────────────────── */
+.law-details {
+  animation: fadeUp 0.6s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Section Headings ───────────────────────── */
+.law-details h2 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red-seal);
+  margin-top: var(--section-gap);
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.law-details h2::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.law-details h2:first-child {
+  margin-top: 0;
+}
+
+/* ─── Paragraphs ─────────────────────────────── */
+.law-details p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--ink-light);
+  max-width: 68ch;
+}
+
+/* ─── Key Points List ────────────────────────── */
+.law-details ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.law-details ul li {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  border-radius: 2px 4px 4px 2px;
+  padding: 1rem 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--ink-light);
+  transition: border-left-color 0.2s ease, background 0.2s ease;
+  position: relative;
+}
+
+.law-details ul li:hover {
+  border-left-color: var(--red-seal);
+  background: #e8e2d8;
+}
+
+.law-details ul li strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  margin-bottom: 0.25rem;
+}
+
+/* ─── Additional Resources box ───────────────── */
+.law-details section > p:last-child,
+.law-details h2:last-of-type + p {
+  background: linear-gradient(135deg, #1a1510 0%, #2d2218 100%);
+  color: rgba(247,243,236,0.85);
+  border-radius: 4px;
+  padding: 1.4rem 1.6rem;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+
+/* ─── Footer ─────────────────────────────────── */
+footer {
+  background: var(--cream);
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+footer a {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.4rem;
+  border: 1.5px solid var(--border);
+  border-radius: 2px;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+footer a::before {
+  content: '←';
+  font-style: normal;
+  transition: transform 0.2s ease;
+}
+
+footer a:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--parchment);
+}
+
+footer a:hover::before {
+  transform: translateX(-3px);
+}
+
+/* ─── Responsive ─────────────────────────────── */
+@media (max-width: 600px) {
+  header {
+    padding: 2.5rem 1.25rem 2rem;
+  }
+
+  main {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .law-details h2 {
+    font-size: 0.875rem;
+  }
+
+  .law-details ul li {
+    padding: 0.85rem 1rem;
+  }
+}
+
+/* ─── Print ──────────────────────────────────── */
+@media print {
+  body {
+    background: white;
+  }
+
+  header {
+    background: white !important;
+    color: black;
+    border-bottom: 2px solid black;
+  }
+
+  footer a {
+    display: none;
+  }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1><%= law.title %></h1>
+    </header>
+    <main>
+        <section class="law-details">
+            <h2>Overview</h2>
+            <p><%= law.summary %></p>
+
+            <h2>Detailed Information</h2>
+            <p><%= law.details %></p>
+
+            <h2>Key Points</h2>
+            <ul>
+                <li><strong>Applicable Fines:</strong> The fines for violations can range from INR 1,000 to INR 10,000, depending on the offense.</li>
+                <li><strong>Legal Proceedings:</strong> Legal action may be initiated if the regulations are not followed.</li>
+                <li><strong>Financial Assistance:</strong> Various government schemes provide financial help for those affected by or seeking compliance with this law.</li>
+            </ul>
+
+            <h2>Additional Resources</h2>
+            <p>For more details or legal assistance, consult a legal expert or visit the official website for this law.</p>
+        </section>
+    </main>
+    <footer>
+        <a href="/simple">Back to Search</a>
+    </footer>
+</body>
+</html>

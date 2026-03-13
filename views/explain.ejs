@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= law.title %> — FindYourLaw.com</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* ─── Variables ──────────────────────────────── */
+        :root {
+            --bg:         #0b0d11;
+            --bg-2:       #10131a;
+            --surface:    rgba(255,255,255,0.035);
+            --surface-2:  rgba(255,255,255,0.055);
+            --border:     rgba(255,255,255,0.07);
+            --border-h:   rgba(201,169,110,0.35);
+            --gold:       #c9a96e;
+            --gold-light: #e2c98a;
+            --text:       #ede7db;
+            --text-muted: rgba(237,231,219,0.5);
+            --nav-bg:     rgba(11,13,17,0.92);
+            --max-width:  740px;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 300;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.75;
+            overflow-x: hidden;
+        }
+
+        /* ─── Background ─────────────────────────────── */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 55% 40% at 50% -5%, rgba(201,169,110,0.08) 0%, transparent 65%),
+                radial-gradient(ellipse 30% 25% at 95% 95%, rgba(122,40,40,0.05) 0%, transparent 55%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ─── Header / Navbar ────────────────────────── */
+        .header-container {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--nav-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 2.5rem;
+            height: 64px;
+            z-index: 1000;
+        }
+
+        .header-container::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), transparent);
+            opacity: 0.4;
+        }
+
+        .logo h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            color: var(--text);
+        }
+
+        .logo h2::first-letter { color: var(--gold); }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.1rem;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.78rem;
+            font-weight: 400;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            padding: 0.4rem 0.85rem;
+            border-radius: 4px;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+            background: rgba(255,255,255,0.05);
+        }
+
+        /* ─── Main Container ─────────────────────────── */
+        .container {
+            flex: 1;
+            max-width: var(--max-width);
+            width: 100%;
+            margin: 0 auto;
+            padding: 110px 1.5rem 100px;
+            position: relative;
+            z-index: 1;
+            animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ─── Eyebrow breadcrumb ─────────────────────── */
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.7rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            opacity: 0.6;
+            margin-bottom: 2rem;
+        }
+
+        .breadcrumb span { color: var(--gold); opacity: 0.8; }
+
+        /* ─── Law Title ──────────────────────────────── */
+        .container h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 400;
+            font-style: italic;
+            line-height: 1.15;
+            letter-spacing: 0.01em;
+            color: var(--text);
+            margin-bottom: 0.75rem;
+            position: relative;
+        }
+
+        /* Gold rule under title */
+        .container h1::after {
+            content: '';
+            display: block;
+            width: 2.5rem;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            margin-top: 1.25rem;
+            border-radius: 2px;
+        }
+
+        /* ─── Watermark § ────────────────────────────── */
+        .law-symbol {
+            position: fixed;
+            right: -0.05em;
+            bottom: 3rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20rem;
+            font-weight: 600;
+            color: rgba(201,169,110,0.03);
+            line-height: 1;
+            pointer-events: none;
+            user-select: none;
+            z-index: 0;
+        }
+
+        /* ─── Description Card ───────────────────────── */
+        .description-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2.25rem 2rem;
+            margin-top: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Left gold accent bar */
+        .description-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--gold), transparent);
+            border-radius: 4px 0 0 4px;
+        }
+
+        .description-label {
+            font-size: 0.68rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0.7;
+            margin-bottom: 1rem;
+        }
+
+        .container p {
+            font-size: 1rem;
+            line-height: 1.9;
+            color: var(--text-muted);
+            max-width: 66ch;
+        }
+
+        /* ─── Meta strip ─────────────────────────────── */
+        .meta-strip {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        .meta-item .meta-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            opacity: 0.55;
+        }
+
+        .meta-item .meta-value {
+            font-size: 0.82rem;
+            color: var(--text);
+            font-weight: 400;
+        }
+
+        /* ─── Search Again Button ────────────────────── */
+        .search-again-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2.5rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #0b0d11;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            padding: 0.85rem 2rem;
+            border-radius: 4px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .search-again-btn::before {
+            content: '←';
+            transition: transform 0.2s;
+        }
+
+        .search-again-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 26px rgba(201,169,110,0.28);
+        }
+
+        .search-again-btn:hover::before { transform: translateX(-3px); }
+        .search-again-btn:active        { transform: translateY(0); }
+
+        /* ─── Footer ─────────────────────────────────── */
+        footer {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: var(--nav-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-top: 1px solid var(--border);
+            padding: 0.7rem 2rem;
+            text-align: center;
+            z-index: 100;
+        }
+
+        footer p {
+            font-size: 0.74rem;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+            opacity: 0.6;
+            line-height: 1.5;
+        }
+
+        /* ─── Responsive ─────────────────────────────── */
+        @media (max-width: 600px) {
+            .header-container { padding: 0 1.25rem; }
+            .nav-links a { font-size: 0.72rem; padding: 0.35rem 0.5rem; }
+            .container { padding-top: 90px; }
+            .description-card { padding: 1.5rem 1.25rem 1.5rem 1.5rem; }
+            .law-symbol { font-size: 12rem; }
+        }
+
+        /* ─── Print ──────────────────────────────────── */
+        @media print {
+            .header-container, footer, .search-again-btn { display: none; }
+            body { background: white; color: black; }
+            .container { padding-top: 2rem; }
+            .description-card { border: 1px solid #ccc; background: #f9f9f9; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── Header ─────────────────────────────── -->
+    <header class="header-container">
+        <div class="logo">
+            <h2>FindYourLaw.com</h2>
+        </div>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact Us</a>
+            <a href="/help">Help</a>
+        </nav>
+    </header>
+
+    <!-- ── Law Detail ─────────────────────────── -->
+    <div class="container">
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="/dashboard" style="color:inherit;text-decoration:none;">Search</a>
+            <span>›</span>
+            Law Detail
+        </div>
+
+        <h1><%= law.title %></h1>
+
+        <!-- Description Card -->
+        <div class="description-card">
+            <p class="description-label">Overview</p>
+            <p><%= law.description %></p>
+
+            <!-- Meta strip -->
+            <div class="meta-strip">
+                <div class="meta-item">
+                    <span class="meta-label">Jurisdiction</span>
+                    <span class="meta-value">India</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Category</span>
+                    <span class="meta-value">General Law</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Language</span>
+                    <span class="meta-value">English</span>
+                </div>
+            </div>
+        </div>
+
+        <a href="/dashboard" class="search-again-btn">Search Again</a>
+
+    </div>
+
+    <!-- Watermark -->
+    <div class="law-symbol" aria-hidden="true">§</div>
+
+    <!-- ── Footer ─────────────────────────────── -->
+    <footer>
+        <p>© 2024 FindYourLaw.com — All Rights Reserved &nbsp;|&nbsp; Made with ❤️ in India</p>
+    </footer>
+
+</body>
+</html>

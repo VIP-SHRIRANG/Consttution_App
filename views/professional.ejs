@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindYourLaw.com - Search Indian Law</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* ─── Variables ──────────────────────────────── */
+        :root {
+            --bg:          #0d0f14;
+            --bg-2:        #13161e;
+            --surface:     rgba(255,255,255,0.04);
+            --border:      rgba(255,255,255,0.08);
+            --border-glow: rgba(196,160,90,0.35);
+            --gold:        #c4a05a;
+            --gold-dim:    rgba(196,160,90,0.15);
+            --text:        #e8e2d6;
+            --text-muted:  rgba(232,226,214,0.5);
+            --accent:      #c4a05a;
+            --nav-bg:      rgba(13,15,20,0.92);
+            --red:         #9b3a3a;
+        }
+
+        /* ─── Reset ──────────────────────────────────── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { font-size: 16px; scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg);
+            background-image:
+                radial-gradient(ellipse 80% 60% at 50% -10%, rgba(196,160,90,0.08) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 40% at 80% 110%, rgba(155,58,58,0.06) 0%, transparent 60%);
+            color: var(--text);
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 300;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* ─── Noise Overlay ──────────────────────────── */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ─── Header / Nav ───────────────────────────── */
+        .header-container {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--nav-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 2.5rem;
+            height: 68px;
+            z-index: 1000;
+        }
+
+        /* Subtle animated gold line at top */
+        .header-container::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0.6;
+        }
+
+        .logo h1 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            color: var(--text);
+            margin: 0;
+            text-align: left;
+        }
+
+        .logo h1 span {
+            color: var(--gold);
+        }
+
+        /* ─── Nav Links ──────────────────────────────── */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 0.45rem 0.85rem;
+            border-radius: 4px;
+            transition: color 0.2s, background 0.2s;
+            background: transparent;
+            border: none;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+            background: var(--surface);
+        }
+
+        .register {
+            margin-left: 1rem;
+            border-left: 1px solid var(--border);
+            padding-left: 1.25rem;
+        }
+
+        .register a {
+            color: var(--bg) !important;
+            background: var(--gold) !important;
+            font-weight: 500 !important;
+            padding: 0.45rem 1.1rem !important;
+            border-radius: 4px !important;
+            letter-spacing: 0.06em;
+            transition: opacity 0.2s, transform 0.2s !important;
+        }
+
+        .register a:hover {
+            opacity: 0.88;
+            transform: translateY(-1px);
+            background: var(--gold) !important;
+            border: none !important;
+        }
+
+        /* ─── Translate Widget ───────────────────────── */
+        .translate-widget {
+            background: transparent;
+        }
+
+        #google_translate_element select {
+            background: var(--bg-2);
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 4px 8px;
+            font-size: 12px;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        /* ─── Hero / Main Content ────────────────────── */
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 1.5rem 100px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .professional-container {
+            width: 100%;
+            max-width: 680px;
+            text-align: center;
+            animation: heroIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        @keyframes heroIn {
+            from { opacity: 0; transform: translateY(28px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Eyebrow label */
+        .professional-container::before {
+            content: '— LEGAL RESEARCH PLATFORM —';
+            display: block;
+            font-size: 0.7rem;
+            letter-spacing: 0.22em;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            opacity: 0.85;
+            animation: heroIn 0.8s 0.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        /* Big headline */
+        .hero-headline {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
+            font-weight: 300;
+            font-style: italic;
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            animation: heroIn 0.8s 0.15s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        .hero-headline em {
+            font-style: normal;
+            color: var(--gold);
+        }
+
+        /* Description */
+        .content {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2.5rem 2.5rem 2rem;
+            backdrop-filter: blur(8px);
+            animation: heroIn 0.8s 0.25s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        .para {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 52ch;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ─── Search Section ─────────────────────────── */
+        .search-section {
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .input-box {
+            position: relative;
+        }
+
+        .input-box::before {
+            content: '⌕';
+            position: absolute;
+            left: 1.1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 1.3rem;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .search-input {
+            width: 100%;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 300;
+            padding: 0.9rem 1.2rem 0.9rem 3rem;
+            outline: none;
+            transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+            letter-spacing: 0.02em;
+        }
+
+        .search-input::placeholder {
+            color: var(--text-muted);
+            opacity: 0.7;
+        }
+
+        .search-input:focus {
+            border-color: var(--border-glow);
+            background: rgba(255,255,255,0.07);
+            box-shadow: 0 0 0 3px rgba(196,160,90,0.08), 0 0 20px rgba(196,160,90,0.06);
+        }
+
+        .search-button {
+            width: 100%;
+            background: var(--gold);
+            color: #0d0f14;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.85rem 2rem;
+            transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+            margin: 0;
+            align-self: auto;
+        }
+
+        .search-button:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(196,160,90,0.25);
+        }
+
+        .search-button:active {
+            transform: translateY(0);
+        }
+
+        /* Hint text */
+        .search-hint {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            opacity: 0.6;
+            letter-spacing: 0.04em;
+            margin-top: 0.5rem;
+        }
+
+        /* ─── Decorative rule ────────────────────────── */
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1.75rem 0;
+            opacity: 0.35;
+        }
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+        .divider span {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        /* ─── Footer ─────────────────────────────────── */
+        footer.footer {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: var(--nav-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-top: 1px solid var(--border);
+            padding: 0.75rem 2rem;
+            text-align: center;
+            z-index: 100;
+        }
+
+        footer.footer p {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            letter-spacing: 0.04em;
+            opacity: 0.7;
+        }
+
+        /* ─── Responsive ─────────────────────────────── */
+        @media (max-width: 640px) {
+            .header-container {
+                padding: 0 1.25rem;
+            }
+
+            .nav-links a:not(:last-child) {
+                display: none;
+            }
+
+            .register {
+                border: none;
+                padding-left: 0;
+                margin-left: 0;
+            }
+
+            .content {
+                padding: 2rem 1.25rem 1.75rem;
+            }
+
+            .hero-headline {
+                font-size: 2.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── Header ─────────────────────────────── -->
+    <header class="header-container">
+        <div class="logo">
+            <h1>Find<span>Your</span>Law.com</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/help">Help</a>
+            <div class="register">
+                <a href="/register">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ── Main Content ───────────────────────── -->
+    <main>
+        <div class="professional-container">
+
+            <h2 class="hero-headline">Know your <em>rights.</em><br>Find your law.</h2>
+
+            <div class="content">
+                <p class="para">
+                    Search for specific laws and regulations that pertain to your profession.
+                    Stay informed about legislation that may impact your work and rights.
+                </p>
+
+                <form action="/search-scrape" method="POST">
+                    <section class="search-section">
+                        <div class="input-box">
+                            <input
+                                type="text"
+                                name="query"
+                                class="search-input"
+                                placeholder="e.g. Right to Information Act, Labour Law..."
+                                required
+                            />
+                        </div>
+                        <button type="submit" class="search-button">Search Laws</button>
+                        <p class="search-hint">Try: "Consumer Protection", "GST Act", "POSH Act"</p>
+                    </section>
+                </form>
+
+                <div class="divider"><span>or use translate</span></div>
+
+                <!-- Google Translate -->
+                <div class="translate-widget" id="google_translate_element"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ── Footer ─────────────────────────────── -->
+    <footer class="footer">
+        <p>© 2024 FindYourLaw.com — All Rights Reserved &nbsp;|&nbsp; Made with ❤️ in India</p>
+    </footer>
+
+</body>
+</html>

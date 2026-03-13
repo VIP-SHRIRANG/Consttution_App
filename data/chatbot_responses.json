@@ -1,0 +1,142 @@
+[
+  {
+    "question": "hello",
+    "aliases": ["hi", "hey", "namaste", "good morning", "good evening", "howdy", "sup"],
+    "response": "Hello! Welcome to the Constitution & Legal Help Assistant. I can help you with questions about Indian laws, your rights, and legal procedures. What would you like to know?"
+  },
+  {
+    "question": "help",
+    "aliases": ["what can you do", "how does this work", "guide me", "assist", "support"],
+    "response": "I can help you with: \n• Your legal rights as a citizen\n• Information about specific Indian laws\n• How to file complaints (FIR, RTI, Consumer Forum)\n• Understanding government schemes\n• Legal procedures explained in simple language\n\nJust type your query and I'll do my best to help!"
+  },
+  {
+    "question": "what is constitution",
+    "aliases": ["indian constitution", "fundamental rights", "directive principles", "preamble", "constitutional rights"],
+    "response": "The Constitution of India, adopted on 26 November 1949, is the supreme law of India. It establishes the framework of government and guarantees Fundamental Rights to all citizens including:\n\n• Right to Equality (Articles 14-18)\n• Right to Freedom (Articles 19-22)\n• Right against Exploitation (Articles 23-24)\n• Right to Freedom of Religion (Articles 25-28)\n• Cultural and Educational Rights (Articles 29-30)\n• Right to Constitutional Remedies (Article 32)\n\nThe Constitution also has Directive Principles guiding state policy and Fundamental Duties of citizens."
+  },
+  {
+    "question": "how to file fir",
+    "aliases": ["police complaint", "file fir", "register fir", "first information report", "police station complaint"],
+    "response": "To file an FIR (First Information Report):\n\n1. Visit the nearest police station with jurisdiction\n2. You have the RIGHT to file an FIR — police cannot refuse\n3. Give a written or oral complaint about the incident\n4. The officer will record it in the FIR register\n5. Demand a FREE copy of the FIR (it is your right under Section 154 CrPC)\n6. Note the FIR number for future reference\n\nIf police refuse to file FIR:\n• Approach the Superintendent of Police (SP)\n• File a complaint with the Magistrate under Section 156(3) CrPC\n• You can also file an e-FIR at your state police portal\n\nEmergency: Call 100 (Police) or 112 (National Emergency)"
+  },
+  {
+    "question": "how to file rti",
+    "aliases": ["rti application", "right to information application", "seek government information", "rti complaint", "pio"],
+    "response": "To file an RTI (Right to Information) Application:\n\n1. Write an application (in English, Hindi, or local official language)\n2. Clearly state the information you seek\n3. Address it to the Public Information Officer (PIO) of the concerned department\n4. Pay INR 10 as application fee (BPL families are exempt)\n5. Submit in person, by post, or online\n\nOnline RTI filing: https://rtionline.gov.in\n\nTimeline:\n• PIO must respond within 30 days\n• 48 hours if it concerns life and liberty\n\nIf unsatisfied: File First Appeal to Appellate Authority, then Second Appeal to Central/State Information Commission."
+  },
+  {
+    "question": "consumer complaint",
+    "aliases": ["file consumer complaint", "defective product", "service complaint", "consumer forum", "consumer court", "unfair business"],
+    "response": "To file a Consumer Complaint:\n\n1. First, contact the company/seller directly\n2. If unresolved, file at National Consumer Helpline: 1800-11-4000 (toll-free)\n3. File online at: https://consumerhelpline.gov.in\n\nConsumer Courts (based on claim amount):\n• District Commission: Up to INR 1 crore\n• State Commission: INR 1 crore to 10 crore\n• National Commission (NCDRC): Above INR 10 crore\n\nDocuments needed:\n• Purchase receipt/invoice\n• Communication with company\n• Photos of defect if applicable\n\nFiling fee is minimal and you can appear without a lawyer."
+  },
+  {
+    "question": "labour rights",
+    "aliases": ["worker rights", "employee rights", "workplace complaint", "salary not paid", "unfair dismissal", "illegal termination"],
+    "response": "Key Labour Rights in India:\n\n• Minimum Wages: Every worker is entitled to minimum wages fixed by state government\n• Working Hours: Maximum 8-9 hours/day, 48 hours/week (Factories Act)\n• Overtime: Paid at double the rate for hours beyond 48/week\n• Provident Fund (EPF): Mandatory for establishments with 20+ employees\n• ESIC: Health insurance for employees earning up to INR 21,000/month\n• Maternity Leave: 26 weeks paid maternity leave\n• Gratuity: After 5 years of service, payable at termination/retirement\n\nFor complaints: Contact the Labour Commissioner's office in your district or file online at https://labour.gov.in"
+  },
+  {
+    "question": "domestic violence",
+    "aliases": ["domestic abuse", "wife beating", "marital abuse", "violence at home", "husband violence", "family violence", "shelter home"],
+    "response": "If you are facing domestic violence, here is what you should know:\n\nImmediate Help:\n• Call Women Helpline: 181\n• Call Police: 100 or 112\n• Contact National Commission for Women: 7827170170\n\nLegal Remedies under Protection of Women from Domestic Violence Act, 2005:\n• Protection Order: Prevents abuser from contacting you\n• Residence Order: Right to stay in shared household\n• Monetary Relief: For expenses and losses\n• Custody Order: For children\n\nSteps:\n1. File complaint at the nearest police station\n2. Contact a Protection Officer at your local magistrate court\n3. Apply to Magistrate for protection orders\n\nOne Stop Centres (Sakhi Centres): Provide shelter, police help, legal aid, and counseling — available in every district."
+  },
+  {
+    "question": "education rights",
+    "aliases": ["school admission", "free education", "RTE admission", "child school rights", "school fees", "scholarship", "CBSE complaint"],
+    "response": "Education Rights in India:\n\n• Free and Compulsory Education: Children aged 6-14 have a Fundamental Right to free education (RTE Act, 2009)\n• Private schools must reserve 25% seats for EWS (Economically Weaker Section) students\n• Schools CANNOT charge capitation fees or conduct screening tests\n• Mid-day meal must be provided in government schools\n\nFor RTE Admission:\n1. Apply online through your state's RTE portal\n2. Documents needed: Birth certificate, residence proof, income certificate\n3. Admission must be given by age-appropriate class\n\nFor Scholarships: Visit https://scholarships.gov.in\n\nComplaints: Contact District Education Officer (DEO) or file at https://pgportal.gov.in"
+  },
+  {
+    "question": "income tax",
+    "aliases": ["how to file itr", "tax return filing", "ITR", "TDS refund", "tax exemption", "tax saving", "form 16", "income tax notice"],
+    "response": "Income Tax Filing Guide:\n\nWho must file ITR:\n• Income above INR 3 lakh (new regime) or INR 2.5 lakh (old regime)\n• If TDS has been deducted from salary\n• For claiming tax refunds\n\nKey Dates:\n• ITR filing due: July 31 (individuals)\n• Belated return: December 31 (with penalty)\n\nPopular Deductions (Old Regime):\n• 80C: Up to INR 1.5 lakh (LIC, PPF, ELSS, tuition fees)\n• 80D: Health insurance premium\n• HRA: House Rent Allowance exemption\n• Standard Deduction: INR 50,000 for salaried employees\n\nFile online at: https://eportal.incometax.gov.in\nHelpline: 1800-103-0025 (toll-free)"
+  },
+  {
+    "question": "cyber crime complaint",
+    "aliases": ["online fraud complaint", "UPI fraud", "bank fraud online", "fake call", "OTP fraud", "social media hack", "email hack", "cyber cell"],
+    "response": "If you are a victim of a cyber crime:\n\nImmediate Steps:\n1. Do NOT share any more OTP/passwords\n2. Block your card immediately (call bank helpline)\n3. Save all screenshots, chats, transaction IDs as evidence\n\nReport At:\n• National Cyber Crime Portal: https://cybercrime.gov.in\n• Helpline: 1930 (National Cyber Crime Helpline)\n• Nearest Cyber Crime Police Station\n\nFor Financial Fraud:\n• Report within 24 hours for best chance of recovery\n• Banks are required to reverse fraudulent transactions reported promptly\n\nCommon Cybercrimes:\n• UPI/Banking fraud: Report to bank + 1930\n• Social media hack: Report to platform + cybercrime.gov.in\n• Sextortion/Blackmail: Report to cyber cell immediately"
+  },
+  {
+    "question": "passport application",
+    "aliases": ["apply for passport", "new passport", "passport renewal", "tatkal passport", "lost passport", "minor passport", "PSK"],
+    "response": "Passport Application Process:\n\n1. Register at: https://passportindia.gov.in\n2. Fill online application form (fresh/renewal/tatkal)\n3. Pay fees online:\n   • Normal: INR 1,500 (36 pages), INR 2,000 (60 pages)\n   • Tatkal: Additional INR 2,000\n4. Book appointment at nearest Passport Seva Kendra (PSK)\n5. Visit PSK with original documents\n\nDocuments Required:\n• Proof of Identity (Aadhaar/PAN/Voter ID)\n• Proof of Address (Aadhaar/utility bill)\n• Date of Birth proof (birth certificate/school leaving)\n• Recent passport-size photos (white background)\n\nDelivery:\n• Normal: 30-45 days\n• Tatkal: 7-14 days\n\nHelpline: 1800-258-1800 (toll-free)"
+  },
+  {
+    "question": "property dispute",
+    "aliases": ["land dispute", "property fraud", "encroachment", "property registration", "sale deed", "title deed", "inheritance dispute", "will contest"],
+    "response": "Property Dispute Resolution:\n\nCommon Types:\n• Title disputes, Boundary disputes, Inheritance conflicts, Builder fraud\n\nSteps to Resolve:\n1. Gather all property documents (title deed, sale deed, mutation records)\n2. Check property records at Sub-Registrar's office\n3. File complaint at local police station if fraud/encroachment\n4. Approach District Collector for land revenue matters\n5. File civil suit in Civil Court\n\nFor Builder Fraud:\n• File complaint with RERA (Real Estate Regulatory Authority)\n• State RERA portal available for each state\n• RERA must resolve within 60 days\n\nFor Mutation:\n• Apply at Tehsil/Taluka office with required documents\n\nLegal Aid: If you cannot afford a lawyer, contact State Legal Services Authority (free legal aid for eligible persons)"
+  },
+  {
+    "question": "startup registration",
+    "aliases": ["how to start a company", "company incorporation", "register business", "MSME registration", "LLP registration", "proprietorship", "new business"],
+    "response": "Starting a Business in India:\n\nChoose Business Structure:\n• Sole Proprietorship: Simplest, no separate registration, unlimited liability\n• Partnership Firm: 2+ partners, register at Registrar of Firms\n• LLP: Limited liability, register on MCA portal\n• Private Limited Company: Separate legal entity, min. 2 directors and shareholders\n\nRegistration Steps (Private Limited / LLP):\n1. Apply for DIN (Director Identification Number)\n2. Reserve company name on MCA21 portal\n3. File incorporation forms (SPICe+ for companies)\n4. Get Certificate of Incorporation\n5. Apply for PAN, TAN, GST, and open bank account\n\nCost: INR 7,000 - 15,000 approximately\nTimeline: 7-15 working days\n\nStartup India Recognition: https://startupindia.gov.in (get tax benefits)\nMCA Portal: https://mca.gov.in"
+  },
+  {
+    "question": "women helpline",
+    "aliases": ["women safety", "harassment helpline", "rape helpline", "stalking complaint", "POSH complaint", "NCW", "women protection"],
+    "response": "Women Safety & Helpline Numbers:\n\n🆘 Emergency: 112\n📞 Women Helpline: 181\n📞 Domestic Violence: 181\n📞 NCW Helpline: 7827170170\n📞 Police: 100\n📞 Child Helpline: 1098\n\nFor Workplace Harassment (POSH):\n• Report to your company's Internal Complaints Committee (ICC)\n• Every company with 10+ employees must have ICC\n• If no ICC exists, approach Local Complaints Committee (LCC) at District level\n\nFor Stalking/Cyberstalking:\n• File FIR at nearest police station\n• Report at https://cybercrime.gov.in\n\nSupport Services:\n• One Stop Centres (Sakhi Centres): Shelter + legal aid + counseling\n• Swadhar Greh Scheme: Shelter homes for distressed women\n\nNCW Website: https://ncw.nic.in"
+  },
+  {
+    "question": "banking complaint",
+    "aliases": ["bank complaint", "loan dispute", "credit card complaint", "banking fraud", "cheque bounce", "banking ombudsman", "ATM fraud"],
+    "response": "Banking Complaint Resolution:\n\nStep 1: Contact your bank's branch manager\nStep 2: Write to bank's grievance redressal officer\nStep 3: If unresolved in 30 days, approach:\n\n🏦 Banking Ombudsman (FREE, no lawyer needed):\n• Online: https://bankingombudsman.rbi.org.in\n• All types of banking complaints covered\n• RBI Helpline: 14448\n\nFor UPI/Digital Payment Fraud:\n• Report immediately to bank: Block card/account\n• Call Cyber Crime Helpline: 1930\n• File online at: https://cybercrime.gov.in\n\nFor Cheque Bounce (Section 138 NI Act):\n• Send legal notice within 30 days of bounce\n• File criminal complaint in Magistrate Court if payment not made within 15 days of notice\n\nCredit Information Dispute:\n• Contact CIBIL/Experian/CRIF at their dispute portals\n• File with RBI Ombudsman if bank refuses to correct"
+  },
+  {
+    "question": "fundamental rights",
+    "aliases": ["constitutional rights", "article 21", "right to life", "freedom of speech", "equality", "right to education", "right to vote", "citizens rights"],
+    "response": "Fundamental Rights guaranteed by the Indian Constitution:\n\n📜 Article 14: Right to Equality before law\n📜 Article 15: Prohibition of discrimination on grounds of religion, race, caste, sex\n📜 Article 19: Six freedoms including speech, assembly, movement, profession\n📜 Article 20: Protection against arbitrary arrest and conviction\n📜 Article 21: Right to Life and Personal Liberty (most important)\n📜 Article 21A: Right to Education (6-14 years)\n📜 Article 22: Protection from arbitrary arrest and detention\n📜 Article 25-28: Freedom of Religion\n📜 Article 32: Right to approach Supreme Court for enforcement of Fundamental Rights\n\nIf your Fundamental Rights are violated:\n• File a Writ Petition in High Court (Article 226) or Supreme Court (Article 32)\n• Types of writs: Habeas Corpus, Mandamus, Certiorari, Prohibition, Quo Warranto\n• Legal aid is available free of cost through NALSA: https://nalsa.gov.in"
+  },
+  {
+    "question": "legal aid",
+    "aliases": ["free lawyer", "legal help", "legal assistance", "nalsa", "poor legal help", "legal services authority", "pro bono"],
+    "response": "Free Legal Aid in India:\n\nWho is eligible:\n• Women and children\n• SC/ST communities\n• Persons with disabilities\n• Victims of trafficking\n• Industrial workmen\n• Persons in custody\n• Anyone with annual income below INR 3 lakh\n\nHow to get free legal aid:\n1. Contact District Legal Services Authority (DLSA) at your district court\n2. Apply online at: https://nalsa.gov.in\n3. Call NALSA helpline: 15100\n\nServices provided:\n• Free legal advice\n• Free representation by lawyer in court\n• Mediation and settlement\n• Legal literacy programs\n\nNote: Legal aid lawyers are government-empaneled and must provide quality service. If unsatisfied, complain to DLSA."
+  },
+  {
+    "question": "retirement",
+    "aliases": ["pension", "EPF withdrawal", "gratuity", "provident fund", "senior citizen rights", "NPS", "old age pension", "retirement benefits"],
+    "response": "Retirement Benefits in India:\n\n📋 Employees' Provident Fund (EPF):\n• Can withdraw full amount after retirement (age 58)\n• Partial withdrawal allowed for specific purposes (house, illness, marriage)\n• Apply online at: https://epfindia.gov.in (Claim Form 19)\n\n📋 Gratuity:\n• Payable after 5 years of continuous service\n• Formula: Last salary x 15/26 x years of service\n• Maximum: INR 20 lakh\n• Must be paid within 30 days of eligibility\n\n📋 National Pension System (NPS):\n• Available for government and private sector employees\n• Tax benefit under Section 80CCD\n• Managed by PFRDA: https://npscra.nsdl.co.in\n\n📋 Senior Citizens:\n• Higher tax exemption limit (INR 3 lakh for 60+, INR 5 lakh for 80+)\n• Senior Citizen Savings Scheme (SCSS) available\n• Priority service at government offices and banks is your right"
+  },
+  {
+    "question": "court procedure",
+    "aliases": ["how to file case", "go to court", "court filing", "civil court", "high court", "supreme court", "magistrate court", "small claims", "court fees"],
+    "response": "How to Approach Courts in India:\n\nTypes of Courts:\n• Magistrate Court: Criminal cases, petty civil matters\n• Civil Court / District Court: Civil disputes, family matters\n• High Court: Appeals from lower courts, constitutional matters\n• Supreme Court: Final appellate court, constitutional matters\n\nFor Civil Cases:\n1. Draft a plaint (complaint) with facts and relief sought\n2. File at appropriate civil court (based on jurisdiction and claim value)\n3. Pay court fees (based on claim amount)\n4. Serve summons to opposite party\n5. Attend hearings\n\nFor Criminal Cases:\n1. File FIR at police station\n2. Or file private complaint directly before Magistrate\n\nFast Track Options:\n• Lok Adalat: Quick, free, compromise-based settlement\n• Consumer Forum: For consumer disputes\n• Labour Court: For employment disputes\n• Family Court: For matrimonial and custody matters\n\nLok Adalat dates: Check at your District Court or https://nalsa.gov.in"
+  },
+  {
+    "question": "gst registration",
+    "aliases": ["apply for gst", "gst number", "GSTIN", "gst for business", "register gst", "gst threshold", "gst exemption", "composition scheme"],
+    "response": "GST Registration Guide:\n\nWho must register:\n• Businesses with turnover above INR 40 lakh (goods) or INR 20 lakh (services)\n• E-commerce sellers (regardless of turnover)\n• Interstate supply businesses\n• Specified categories (taxi aggregators, etc.)\n\nRegistration Process:\n1. Visit https://gst.gov.in\n2. Click New Registration\n3. Fill details (PAN, business details, bank account)\n4. Upload documents (PAN, Aadhaar, bank statement, business proof)\n5. Verify with OTP\n6. Receive GSTIN within 3-7 working days\n\nKey Compliance:\n• File GSTR-1 (monthly/quarterly): Outward supplies\n• File GSTR-3B (monthly): Summary return\n• Annual return: GSTR-9 by December 31\n\nComposition Scheme (for turnover up to INR 1.5 crore): Lower flat rate tax, fewer compliances\n\nGST Helpline: 1800-103-4786 (toll-free)"
+  },
+  {
+    "question": "police rights",
+    "aliases": ["rights during arrest", "police harassment", "custodial torture", "bail rights", "right to lawyer", "arrest procedure", "police abuse"],
+    "response": "Your Rights When Dealing With Police:\n\n✅ Rights During Arrest:\n• Police MUST inform you of the reason for arrest\n• Right to know charges against you (Article 22)\n• Right to be produced before Magistrate within 24 hours\n• Right to inform family/friend of arrest\n• Right to a lawyer (you can call your lawyer immediately)\n• Right against self-incrimination (cannot be forced to confess)\n• Female cannot be arrested after sunset and before sunrise except in exceptional circumstances\n\n✅ Rights in Police Station:\n• Right to legal aid (free lawyer if you cannot afford one)\n• Right against torture (custodial torture is illegal and criminal)\n• Right to medical examination if alleging police brutality\n\n✅ If Police Violate Your Rights:\n• File complaint with Superintendent of Police (SP)\n• Approach Human Rights Commission (NHRC or State HRC)\n• File Writ of Habeas Corpus in High Court for illegal detention\n• NHRC Helpline: 14433"
+  },
+  {
+    "question": "divorce",
+    "aliases": ["separation", "legal separation", "divorce procedure", "mutual consent divorce", "contested divorce", "alimony", "maintenance", "custody", "child custody"],
+    "response": "Divorce Process in India:\n\nTypes of Divorce:\n1. Mutual Consent Divorce: Both parties agree\n   • File joint petition in Family Court\n   • 6-month cooling off period (can be waived)\n   • Faster and less expensive\n\n2. Contested Divorce: One party files\n   • Grounds: Cruelty, adultery, desertion (2+ years), mental disorder, conversion of religion\n   • Takes longer (1-5 years typically)\n\nDocuments Needed:\n• Marriage certificate, address proofs, photos, income proof\n• Evidence of grounds (for contested divorce)\n\nMaintenance/Alimony:\n• Section 125 CrPC: Magistrate can order maintenance for spouse and children\n• No minimum, decided by court based on income and needs\n\nChild Custody:\n• Court decides based on 'best interest of child'\n• Both parents have right to visit unless court restricts\n\nFamily Courts: Available in all districts for faster family dispute resolution. You can also try Mediation first — it is free, confidential, and faster."
+  },
+  {
+    "question": "insurance",
+    "aliases": ["insurance claim", "insurance fraud", "life insurance", "health insurance", "vehicle insurance", "IRDAI complaint", "policy lapse", "claim rejection"],
+    "response": "Insurance Rights and Complaint Process:\n\nYour Rights as a Policyholder:\n• Right to receive policy document within 30 days\n• 15-day 'free look' period to return the policy\n• Claims must be settled within 30 days (life insurance)\n• Health insurance claims: 30 days for reimbursement, immediate for cashless\n\nFor Claim Rejection:\n1. File complaint with your insurance company's grievance cell\n2. If unresolved in 15 days, approach:\n   • Insurance Ombudsman (free, covers claims up to INR 50 lakh)\n   • Online: https://ecoi.co.in\n   • IRDAI Bima Bharosa portal\n\nIRDAI Helpline: 155255 or 1800-4254-732 (toll-free)\n\nCommon Valid Reasons for Claim Settlement:\n• Policy must be active at time of claim\n• Disclose all medical conditions honestly at time of purchase\n• File claim within stipulated time\n\nFor Motor Insurance Claims:\n• Inform police for accident/theft\n• Inform insurer within 24-48 hours\n• Do not move damaged vehicle before survey"
+  },
+  {
+    "question": "aadhaar",
+    "aliases": ["aadhaar card", "UID", "biometric", "aadhaar update", "aadhaar linking", "UIDAI", "aadhaar address change", "aadhaar enrollment"],
+    "response": "Aadhaar - Everything You Need to Know:\n\nAadhaar Enrollment:\n• Visit nearest Aadhaar Enrollment Centre (Post Office, banks, etc.)\n• Documents: One proof of identity + one proof of address\n• Biometric data (fingerprints, iris) collected\n• Aadhaar sent by post in 90 days\n\nAadhaar Update/Correction:\n• Online update at: https://myaadhaar.uidai.gov.in\n• Update name, address, DOB, gender, mobile number\n• Documents must be uploaded for corrections\n• Visit Aadhaar Seva Kendra for biometric update\n\nAaadhaar Rights:\n• Aadhaar is NOT mandatory for most services\n• Cannot be made mandatory as sole identity document\n• UIDAI must protect your biometric data\n\nReport Misuse/Fraud:\n• UIDAI Helpline: 1947 (toll-free)\n• Email: help@uidai.gov.in\n• Aadhaar Virtual ID: Use instead of actual Aadhaar number for privacy\n\nCheck Aadhaar Authentication History: https://myaadhaar.uidai.gov.in"
+  },
+  {
+    "question": "what is rti",
+    "aliases": ["explain rti", "RTI meaning", "right to information meaning", "can I ask government information"],
+    "response": "RTI - Right to Information:\n\nThe Right to Information Act, 2005 gives every citizen of India the RIGHT to ask for information from any government body.\n\nWhat you can ask:\n• Status of your application/file\n• Government schemes and their beneficiaries\n• Details of public spending\n• Copies of government documents\n• Reasons for government decisions affecting you\n\nWhat you CANNOT ask:\n• Information relating to national security\n• Cabinet notes\n• Personal information of other individuals\n• Information received in confidence from foreign government\n\nHow to Apply:\n• Online: https://rtionline.gov.in\n• Write to Public Information Officer (PIO) of the department\n• Fee: INR 10 (postal order / demand draft / online)\n• Response within 30 days (48 hours for life/liberty issues)\n\nRemember: If PIO does not respond or gives incomplete information, you can appeal to First Appellate Authority and then to Central/State Information Commission."
+  },
+  {
+    "question": "voter id",
+    "aliases": ["voter registration", "EPIC card", "voter card", "electoral roll", "how to vote", "election registration", "voter enrolment"],
+    "response": "Voter ID and Voting Rights:\n\nEligibility:\n• Indian citizen aged 18 years and above\n• Resident of the constituency\n\nNew Voter Registration:\n1. Visit: https://voters.eci.gov.in or National Voter Services Portal (NVSP)\n2. Fill Form 6 (new registration)\n3. Upload documents: Proof of age, proof of residence, photo\n4. Verification done by BLO (Booth Level Officer)\n5. Voter ID delivered or downloadable as e-EPIC\n\nFor Corrections/Updates:\n• Form 8: Correction of entries\n• Form 8A: Change of address within constituency\n\nVoter Rights:\n• Right to secret ballot\n• Right to NOTA (None of the Above) option\n• Cannot be prevented from voting if name is on electoral roll\n\nModel Code of Conduct violations:\n• Report to ECI: 1950 (National Voter Helpline) or cVIGIL app\n\nDownload e-EPIC: https://voters.eci.gov.in"
+  },
+  {
+    "question": "air pollution",
+    "aliases": ["pollution complaint", "factory smoke", "dust pollution", "noise pollution", "water pollution", "pollution board", "CPCB", "environmental complaint"],
+    "response": "How to Report Pollution:\n\nFor Air/Water/Noise Pollution:\n1. Contact State Pollution Control Board (SPCB) of your state\n2. File complaint online at: https://cpcb.nic.in\n3. Approach National Green Tribunal (NGT) for serious cases\n\nFor Noise Pollution:\n• Permitted levels: 55 dB (day), 45 dB (night) in residential areas\n• File complaint at local police station\n• Can also approach District Collector\n\nFor Industrial Pollution:\n• Industries must have consent to operate from SPCB\n• Report violations to SPCB with photos/videos as evidence\n• NGT has given several landmark judgments for environmental protection\n\nFor Burning Crop/Waste:\n• Report to local SPCB or municipal authority\n• Crop burning is banned in NCR states\n\nNGT Helpline: 011-23222705\nCPCB: https://cpcb.nic.in\n\nUnder EPA 1986, penalties can be up to INR 1 lakh per day of violation."
+  }
+]

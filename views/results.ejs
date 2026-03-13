@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results - FindYourLaw</title>
+  <link rel="stylesheet" href="/css/results.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <header class="header-container">
+    <div class="logo"><h2>FindYourLaw.com</h2></div>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/contactus">Contact Us</a>
+      <a href="/help">Help</a>
+    </nav>
+  </header>
+
+  <div class="results-wrapper">
+    <h2 class="results-heading">
+      <i class="fas fa-search"></i> Results for: <span>"<%= query %>"</span>
+    </h2>
+
+    <% if (results && results.length > 0) { %>
+      <div class="results-list">
+        <% results.forEach(result => { %>
+          <div class="result-card">
+
+            <!-- Source badge -->
+            <% if (result.source) { %>
+              <span class="source-badge"><i class="fas fa-globe"></i> <%= result.source %></span>
+            <% } %>
+
+            <!-- Title -->
+            <h3 class="result-title">
+              <% if (result.link && result.link !== '#') { %>
+                <a href="<%= result.link %>" target="_blank" rel="noopener noreferrer">
+                  <%= result.title %>
+                </a>
+              <% } else { %>
+                <%= result.title %>
+              <% } %>
+            </h3>
+
+            <!-- Snippet / Summary -->
+            <% if (result.snippet) { %>
+              <p class="result-snippet"><%= result.snippet %></p>
+            <% } else if (result.description) { %>
+              <p class="result-snippet"><%= result.description %></p>
+            <% } %>
+
+            <!-- Link button -->
+            <% if (result.link && result.link !== '#') { %>
+              <a href="<%= result.link %>" target="_blank" rel="noopener noreferrer" class="result-link-btn">
+                <i class="fas fa-external-link-alt"></i> View Full Details
+              </a>
+            <% } %>
+
+          </div>
+        <% }) %>
+      </div>
+    <% } else { %>
+      <p class="no-results">No results found. Please try a different search term.</p>
+    <% } %>
+
+    <a href="javascript:history.back()" class="back-btn">
+      <i class="fas fa-arrow-left"></i> Back to Search
+    </a>
+  </div>
+
+  <footer class="footer">
+    <p>© 2024 Emperor - Laws And Regulations. All Rights Reserved | Made with ❤️ in India</p>
+  </footer>
+
+</body>
+</html>

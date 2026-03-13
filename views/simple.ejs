@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindYourLaw.com — Browse by Topic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <style>
+        /* ─── Variables ──────────────────────────────── */
+        :root {
+            --bg:         #0b0d11;
+            --bg-2:       #10131a;
+            --bg-card:    rgba(255,255,255,0.035);
+            --border:     rgba(255,255,255,0.07);
+            --border-h:   rgba(201,169,110,0.35);
+            --gold:       #c9a96e;
+            --gold-light: #e2c98a;
+            --text:       #ede7db;
+            --text-muted: rgba(237,231,219,0.45);
+            --nav-bg:     rgba(11,13,17,0.92);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { font-size: 16px; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 300;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* ─── Background ─────────────────────────────── */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 65% 50% at 50% -5%, rgba(201,169,110,0.09) 0%, transparent 65%),
+                radial-gradient(ellipse 35% 30% at 95% 95%, rgba(122,40,40,0.06) 0%, transparent 55%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ─── Header ─────────────────────────────────── */
+        .header-container {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--nav-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 2.5rem;
+            height: 64px;
+            z-index: 1000;
+        }
+
+        .header-container::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), transparent);
+            opacity: 0.4;
+        }
+
+        .logo h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            color: var(--text);
+        }
+
+        .logo h2::first-letter { color: var(--gold); }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.1rem;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.78rem;
+            font-weight: 400;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            padding: 0.4rem 0.85rem;
+            border-radius: 4px;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+            background: rgba(255,255,255,0.05);
+        }
+
+        .translate-box {
+            flex-shrink: 0;
+        }
+
+        #google_translate_element select {
+            background: var(--bg-2);
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 4px 8px;
+            font-size: 11px;
+            font-family: 'DM Sans', sans-serif;
+            outline: none;
+        }
+
+        /* ─── Main ───────────────────────────────────── */
+        .space {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 1.5rem 90px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Eyebrow */
+        .space::before {
+            content: '— Browse By Topic —';
+            display: block;
+            font-size: 0.68rem;
+            letter-spacing: 0.22em;
+            color: var(--gold);
+            margin-bottom: 1.75rem;
+            opacity: 0.7;
+            animation: rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        @keyframes rise {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Description */
+        .para {
+            font-size: 1rem;
+            line-height: 1.85;
+            color: var(--text-muted);
+            text-align: center;
+            max-width: 52ch;
+            margin-bottom: 2.5rem;
+            animation: rise 0.8s 0.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        /* ─── Topic Cards (main dropdown visual) ─────── */
+        .topic-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            width: 100%;
+            max-width: 560px;
+            margin-bottom: 1.5rem;
+            animation: rise 0.8s 0.15s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        .topic-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1.1rem 1.25rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            transition: border-color 0.2s, background 0.2s, transform 0.15s;
+            user-select: none;
+        }
+
+        .topic-card:hover {
+            border-color: var(--border-h);
+            background: rgba(201,169,110,0.06);
+            transform: translateY(-1px);
+        }
+
+        .topic-card.active {
+            border-color: var(--gold);
+            background: rgba(201,169,110,0.1);
+        }
+
+        .topic-card .card-icon {
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        .topic-card .card-label {
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            color: var(--text);
+        }
+
+        .topic-card .card-sub {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-top: 0.15rem;
+            letter-spacing: 0.03em;
+        }
+
+        /* ─── Form & Dropdowns ───────────────────────── */
+        form {
+            width: 100%;
+            max-width: 560px;
+            animation: rise 0.8s 0.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        .search-section {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .input-box {
+            position: relative;
+        }
+
+        .input-box::after {
+            content: '▾';
+            position: absolute;
+            right: 1.1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gold);
+            font-size: 0.85rem;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        .search-input {
+            width: 100%;
+            appearance: none;
+            -webkit-appearance: none;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 300;
+            padding: 0.9rem 2.5rem 0.9rem 1.1rem;
+            outline: none;
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+        }
+
+        .search-input option {
+            background: #1a1e28;
+            color: var(--text);
+        }
+
+        .search-input:focus,
+        .search-input:hover {
+            border-color: var(--border-h);
+            background: rgba(255,255,255,0.07);
+            box-shadow: 0 0 0 3px rgba(201,169,110,0.07);
+        }
+
+        /* Sub-dropdown slide-in */
+        #sub-dropdown-container {
+            animation: slideDown 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-8px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Search Button */
+        .search-button {
+            width: 100%;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: #0b0d11;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            padding: 0.9rem 2rem;
+            transition: transform 0.15s, box-shadow 0.2s, opacity 0.2s;
+            margin-top: 0.25rem;
+        }
+
+        .search-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(201,169,110,0.28);
+            opacity: 0.92;
+        }
+
+        .search-button:active { transform: translateY(0); }
+
+        /* ─── Footer ─────────────────────────────────── */
+        .footer {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: var(--nav-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-top: 1px solid var(--border);
+            padding: 0.7rem 2rem;
+            text-align: center;
+            z-index: 100;
+        }
+
+        .footer p {
+            font-size: 0.74rem;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+            opacity: 0.6;
+        }
+
+        /* ─── Responsive ─────────────────────────────── */
+        @media (max-width: 600px) {
+            .header-container { padding: 0 1.25rem; }
+            .nav-links a { font-size: 0.72rem; padding: 0.35rem 0.55rem; }
+            .topic-cards { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── Header ─────────────────────────────── -->
+    <header class="header-container">
+        <div class="logo">
+            <h2>FindYourLaw.com</h2>
+        </div>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/aboutus">About</a>
+            <a href="/contactus">Contact Us</a>
+            <a href="/help">Help</a>
+        </nav>
+        <div id="google_translate_element" class="translate-box"></div>
+    </header>
+
+    <!-- ── Main ───────────────────────────────── -->
+    <div class="space">
+
+        <p class="para">
+            Understanding the laws that impact your daily life is essential.
+            Select a topic below to explore relevant laws and regulations that matter to you.
+        </p>
+
+        <!-- Visual topic cards (purely cosmetic, sync with select) -->
+        <div class="topic-cards">
+            <div class="topic-card" data-value="personal matters">
+                <span class="card-icon">👤</span>
+                <div>
+                    <div class="card-label">Personal Matters</div>
+                    <div class="card-sub">Marriage · Family · Health</div>
+                </div>
+            </div>
+            <div class="topic-card" data-value="finance and employment">
+                <span class="card-icon">💼</span>
+                <div>
+                    <div class="card-label">Finance & Employment</div>
+                    <div class="card-sub">Employment · GST · Bankruptcy</div>
+                </div>
+            </div>
+            <div class="topic-card" data-value="property and housing">
+                <span class="card-icon">🏠</span>
+                <div>
+                    <div class="card-label">Property & Housing</div>
+                    <div class="card-sub">Rent · Car · Property</div>
+                </div>
+            </div>
+            <div class="topic-card" data-value="public and government">
+                <span class="card-icon">⚖️</span>
+                <div>
+                    <div class="card-label">Public & Government</div>
+                    <div class="card-sub">Education · Criminal · Consumer</div>
+                </div>
+            </div>
+        </div>
+
+        <form action="/search-json" method="POST">
+            <section class="search-section">
+
+                <div class="input-box">
+                    <select id="main-dropdown" class="search-input" required>
+                        <option value="" disabled selected>Select a Main Topic</option>
+                        <option value="personal matters">Personal Matters</option>
+                        <option value="finance and employment">Finance and Employment</option>
+                        <option value="property and housing">Property and Housing</option>
+                        <option value="public and government">Public and Government</option>
+                    </select>
+                </div>
+
+                <div class="input-box" id="sub-dropdown-container" style="display: none;">
+                    <select id="sub-dropdown" name="query" class="search-input" required>
+                        <option value="" disabled selected>Select a Sub Topic</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="search-button">Search Laws</button>
+
+            </section>
+        </form>
+
+    </div>
+
+    <!-- ── Footer ─────────────────────────────── -->
+    <footer class="footer">
+        <p>© 2024 FindYourLaw.com — All Rights Reserved &nbsp;|&nbsp; Made with ❤️ in India</p>
+    </footer>
+
+    <!-- ── Scripts ────────────────────────────── -->
+    <script>
+        const subTopics = {
+            "personal matters": [
+                { value: "marriage",    text: "Marriage" },
+                { value: "family law",  text: "Family Law" },
+                { value: "health",      text: "Health" }
+            ],
+            "finance and employment": [
+                { value: "employment",  text: "Employment" },
+                { value: "gst",         text: "GST" },
+                { value: "bankruptcy",  text: "Bankruptcy" }
+            ],
+            "property and housing": [
+                { value: "rent agreement", text: "Rent Agreement" },
+                { value: "buying a car",   text: "Buying a Car" },
+                { value: "property",       text: "Property" }
+            ],
+            "public and government": [
+                { value: "education",       text: "Education" },
+                { value: "criminal law",    text: "Criminal Law" },
+                { value: "consumer rights", text: "Consumer Rights" }
+            ]
+        };
+
+        const mainDropdown = document.getElementById('main-dropdown');
+        const subDropdownContainer = document.getElementById('sub-dropdown-container');
+        const subDropdown = document.getElementById('sub-dropdown');
+        const cards = document.querySelectorAll('.topic-card');
+
+        function selectTopic(value) {
+            // Sync the hidden select
+            mainDropdown.value = value;
+
+            // Highlight active card
+            cards.forEach(c => c.classList.toggle('active', c.dataset.value === value));
+
+            // Populate sub-topics
+            subDropdown.innerHTML = '<option value="" disabled selected>Select a Sub Topic</option>';
+            if (subTopics[value]) {
+                subTopics[value].forEach(sub => {
+                    const opt = document.createElement('option');
+                    opt.value = sub.value;
+                    opt.text  = sub.text;
+                    subDropdown.add(opt);
+                });
+                subDropdownContainer.style.display = 'block';
+            } else {
+                subDropdownContainer.style.display = 'none';
+            }
+        }
+
+        // Card click → select topic
+        cards.forEach(card => {
+            card.addEventListener('click', () => selectTopic(card.dataset.value));
+        });
+
+        // Dropdown change → highlight card
+        mainDropdown.addEventListener('change', function () {
+            selectTopic(this.value);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,388 @@
+[
+  {
+    "keyword": "buying a car",
+    "aliases": ["vehicle purchase", "car purchase", "automobile", "two wheeler", "bike purchase", "vehicle registration", "motor vehicle"],
+    "title": "Motor Vehicles Act",
+    "summary": "When buying a car, make sure it is registered and has a valid driving license. Check that the vehicle meets safety and emission standards. Follow traffic rules and drive safely to avoid fines.",
+    "full_description": "The Motor Vehicles Act, 1988 governs all aspects of road transport vehicles in India. It mandates vehicle registration, licensing of drivers, insurance requirements, and lays out traffic rules. The Act was significantly amended in 2019 to increase penalties for traffic violations.",
+    "penalties": "Fines range from INR 500 to INR 10,000+ depending on the offense. Driving without a license can attract a fine of INR 5,000 and/or 3 months imprisonment.",
+    "helpful_links": ["https://parivahan.gov.in", "https://morth.nic.in"],
+    "law": [
+      { "article_number": "39", "article_title": "Necessity for registration" },
+      { "article_number": "130", "article_title": "Duty to produce license and certificate of registration" },
+      { "article_number": "146", "article_title": "Necessity for insurance against third party risk" },
+      { "article_number": "177", "article_title": "General provision for punishment of offences" }
+    ]
+  },
+  {
+    "keyword": "rent agreement",
+    "aliases": ["rental", "tenant", "landlord", "lease", "eviction", "house rent", "renting", "pg accommodation", "paying guest"],
+    "title": "Rent Control Act",
+    "summary": "If you are renting a place, ensure your rent agreement is fair. Landlords cannot increase rent or evict you without a valid reason. If issues arise, you have legal rights to protect yourself.",
+    "full_description": "Rent Control Acts vary by state in India but generally regulate rent amounts, protect tenants from arbitrary eviction, and lay down conditions under which a landlord may repossess property. Always register your rent agreement to make it legally enforceable.",
+    "penalties": "Unlawful eviction can result in imprisonment up to 1 year and/or fine. Landlords charging excess rent face penalties under state-specific Rent Control Acts.",
+    "helpful_links": ["https://igrs.delhi.gov.in", "https://maharerait.mahaonline.gov.in"],
+    "law": [
+      { "article_number": "4", "article_title": "Fixation of standard rent" },
+      { "article_number": "14", "article_title": "Protection of tenant against eviction" },
+      { "article_number": "19", "article_title": "Recovery of possession for personal occupation" },
+      { "article_number": "21", "article_title": "Landlord's right to recover possession" }
+    ]
+  },
+  {
+    "keyword": "marriage",
+    "aliases": ["wedding", "divorce", "alimony", "matrimony", "hindu marriage", "nikah", "christian marriage", "special marriage", "dowry", "domestic violence", "separation"],
+    "title": "Hindu Marriage Act",
+    "summary": "For a legal Hindu marriage, you need to meet age requirements and give consent. This act also covers how to handle divorce and alimony if the marriage ends, ensuring fair treatment.",
+    "full_description": "The Hindu Marriage Act, 1955 governs Hindu marriages in India. It sets conditions for a valid marriage, including minimum age (18 for bride, 21 for groom), mental soundness, and no prohibited relationships. It also provides for divorce, judicial separation, and maintenance/alimony.",
+    "penalties": "Bigamy is punishable with up to 7 years imprisonment under Section 494 IPC. Dowry demands are punishable under the Dowry Prohibition Act.",
+    "helpful_links": ["https://wcd.nic.in"],
+    "law": [
+      { "article_number": "5", "article_title": "Conditions for a Hindu marriage" },
+      { "article_number": "13", "article_title": "Divorce" },
+      { "article_number": "24", "article_title": "Maintenance pendente lite and expenses of proceedings" },
+      { "article_number": "25", "article_title": "Permanent alimony and maintenance" }
+    ]
+  },
+  {
+    "keyword": "gst",
+    "aliases": ["goods and services tax", "indirect tax", "tax filing", "input tax credit", "gstr", "invoice", "e-way bill", "tax compliance", "business tax"],
+    "title": "Goods and Services Tax (GST) Act",
+    "summary": "GST combines several taxes into one. When buying goods or services, the tax is included in the price. Businesses need to follow GST rules to ensure proper tax collection and payment.",
+    "full_description": "The Goods and Services Tax Act, 2017 replaced multiple indirect taxes with a unified tax system. GST is levied at every stage of supply chain. Businesses with turnover above INR 40 lakh (INR 20 lakh for services) must register for GST. Returns must be filed monthly/quarterly.",
+    "penalties": "Late filing attracts INR 50/day (INR 20/day for nil returns). Tax evasion can attract 100% penalty of tax evaded plus imprisonment up to 5 years.",
+    "helpful_links": ["https://gst.gov.in", "https://cbic.gov.in"],
+    "law": [
+      { "article_number": "7", "article_title": "Scope of supply" },
+      { "article_number": "37", "article_title": "Furnishing details of outward supplies" },
+      { "article_number": "16", "article_title": "Eligibility and conditions for taking input tax credit" },
+      { "article_number": "122", "article_title": "Penalty for certain offences" }
+    ]
+  },
+  {
+    "keyword": "passport",
+    "aliases": ["travel document", "visa", "international travel", "passport renewal", "e-passport", "tatkal passport", "minor passport"],
+    "title": "Indian Passport Act",
+    "summary": "To get or renew an Indian passport, provide necessary documents and pass identity checks. Avoid any fake information or misuse to prevent legal issues.",
+    "full_description": "The Passports Act, 1967 governs issuance, renewal, and revocation of Indian passports. Applications are processed through Passport Seva Kendras. Required documents include proof of identity, address proof, date of birth certificate, and photographs.",
+    "penalties": "Providing false information attracts imprisonment up to 2 years and/or fine of INR 5,000. Misuse of passport is punishable under Section 12.",
+    "helpful_links": ["https://passportindia.gov.in", "https://mea.gov.in"],
+    "law": [
+      { "article_number": "5", "article_title": "Application for passports" },
+      { "article_number": "10", "article_title": "Variation, impounding and revocation of passports" },
+      { "article_number": "12", "article_title": "Offences and penalties" }
+    ]
+  },
+  {
+    "keyword": "employment",
+    "aliases": ["job", "work", "salary", "wages", "termination", "firing", "layoff", "maternity leave", "provident fund", "gratuity", "ESI", "labor rights", "employee rights", "workplace"],
+    "title": "Industrial Employment (Standing Orders) Act",
+    "summary": "Register with government job centers if you are looking for work. Employers will list job openings there, helping you find suitable employment. Workers have protected rights against unfair dismissal.",
+    "full_description": "Multiple laws govern employment in India including the Industrial Employment Act, Minimum Wages Act, Payment of Wages Act, and Employees' Provident Funds Act. These laws protect workers' rights relating to fair wages, working hours, social security, and protection from arbitrary dismissal.",
+    "penalties": "Non-payment of minimum wages attracts imprisonment up to 6 months. Wrongful termination entitles employees to reinstatement and back wages.",
+    "helpful_links": ["https://labour.gov.in", "https://epfindia.gov.in", "https://esic.in"],
+    "law": [
+      { "article_number": "3", "article_title": "Employment exchanges" },
+      { "article_number": "5", "article_title": "Employer's obligation to notify vacancies" },
+      { "article_number": "25F", "article_title": "Conditions precedent to retrenchment of workmen" },
+      { "article_number": "12", "article_title": "Termination of employment rules" }
+    ]
+  },
+  {
+    "keyword": "consumer rights",
+    "aliases": ["consumer complaint", "product defect", "refund", "fraud", "cheating", "deficiency in service", "online shopping", "e-commerce", "unfair trade practice", "consumer forum", "consumer court"],
+    "title": "Consumer Protection Act",
+    "summary": "If you have issues with products or services, this act helps you file complaints and seek compensation. Businesses must follow fair practices and address customer grievances.",
+    "full_description": "The Consumer Protection Act, 2019 strengthens consumer rights by establishing a 3-tier quasi-judicial consumer dispute redressal framework. District commissions handle claims up to INR 1 crore, State commissions up to INR 10 crore, and National Commission for higher amounts. The Act also covers e-commerce and direct selling.",
+    "penalties": "Unfair trade practices and misleading advertisements attract fines up to INR 10 lakh. Repeat offenses may attract imprisonment up to 2 years.",
+    "helpful_links": ["https://consumerhelpline.gov.in", "https://ncdrc.nic.in"],
+    "law": [
+      { "article_number": "2", "article_title": "Definitions of consumer rights" },
+      { "article_number": "12", "article_title": "Manner in which complaint shall be made" },
+      { "article_number": "35", "article_title": "Manner in which complaint shall be made to District Commission" },
+      { "article_number": "47", "article_title": "Jurisdiction of State Commission" }
+    ]
+  },
+  {
+    "keyword": "intellectual property",
+    "aliases": ["patent", "copyright", "trademark", "IP rights", "plagiarism", "piracy", "brand protection", "creative rights", "invention", "design protection", "geographical indication"],
+    "title": "Intellectual Property Rights Act",
+    "summary": "Protect your creative work like inventions, writings, and designs. Ensure no one uses your intellectual property without permission to prevent misuse and loss.",
+    "full_description": "India has several IPR laws: Patents Act (1970), Copyright Act (1957), Trade Marks Act (1999), and Designs Act (2000). Patents protect inventions for 20 years. Copyrights protect literary/artistic works for 60 years after author's death. Trademarks can be renewed indefinitely.",
+    "penalties": "Copyright infringement attracts 6 months to 3 years imprisonment and fines from INR 50,000 to INR 2 lakh. Patent infringement can lead to injunctions and damages.",
+    "helpful_links": ["https://ipindia.gov.in", "https://copyright.gov.in"],
+    "law": [
+      { "article_number": "10", "article_title": "Eligibility criteria for registration" },
+      { "article_number": "22", "article_title": "Rights and responsibilities of intellectual property owners" },
+      { "article_number": "51", "article_title": "Acts constituting infringement of copyright" },
+      { "article_number": "63", "article_title": "Offence of infringement of copyright" }
+    ]
+  },
+  {
+    "keyword": "company registration",
+    "aliases": ["startup", "incorporate", "business registration", "LLP", "private limited", "sole proprietorship", "MCA", "ROC", "memorandum of association", "articles of association", "MSME"],
+    "title": "Companies Act",
+    "summary": "When starting a company, follow the registration process and comply with legal requirements. This includes transparent operations and proper financial reporting.",
+    "full_description": "The Companies Act, 2013 governs incorporation, management, and winding up of companies in India. Companies are registered with the Registrar of Companies (ROC) through the MCA21 portal. Types include Private Limited, Public Limited, and One Person Companies (OPC). Annual filing of financial statements is mandatory.",
+    "penalties": "Failure to file annual returns attracts fines of INR 50,000 to INR 5 lakh. Directors can be disqualified for non-compliance. Fraudulent conduct attracts imprisonment up to 10 years.",
+    "helpful_links": ["https://mca.gov.in", "https://startupindia.gov.in"],
+    "law": [
+      { "article_number": "3", "article_title": "Formation of company" },
+      { "article_number": "7", "article_title": "Incorporation of company" },
+      { "article_number": "134", "article_title": "Financial statement, Board's report" },
+      { "article_number": "149", "article_title": "Company to have Board of Directors" }
+    ]
+  },
+  {
+    "keyword": "education",
+    "aliases": ["school", "RTE", "right to education", "admission", "mid day meal", "child education", "free education", "compulsory education", "school fees", "private school"],
+    "title": "Right of Children to Free and Compulsory Education Act",
+    "summary": "Children aged 6 to 14 must receive free education. Schools and the government must ensure that all children have access to quality education.",
+    "full_description": "The Right of Children to Free and Compulsory Education (RTE) Act, 2009 makes education a fundamental right for children aged 6-14 years. Private schools must reserve 25% seats for children from weaker sections. Schools cannot charge capitation fees or conduct screening tests for admission.",
+    "penalties": "Charging capitation fees attracts fines up to 10 times the amount charged. Conducting screening tests attracts fines up to INR 25,000 for first offense.",
+    "helpful_links": ["https://mhrd.gov.in", "https://rte.udise.in"],
+    "law": [
+      { "article_number": "3", "article_title": "Right of child to free and compulsory education" },
+      { "article_number": "12", "article_title": "Extent of school responsibilities" },
+      { "article_number": "13", "article_title": "Prohibition of capitation fee" },
+      { "article_number": "17", "article_title": "Prohibition of physical punishment" }
+    ]
+  },
+  {
+    "keyword": "health",
+    "aliases": ["medical", "hospital", "doctor", "epidemic", "COVID", "mental health", "healthcare rights", "clinical establishment", "medical negligence", "insurance claim", "AYUSHMAN"],
+    "title": "The Epidemic Diseases Act",
+    "summary": "In case of an epidemic, follow government guidelines for quarantine and public health measures to prevent the spread of disease.",
+    "full_description": "The Epidemic Diseases Act, 1897 empowers central and state governments to take special measures during dangerous epidemic diseases. The Clinical Establishments Act, 2010 regulates hospitals and clinics. The Mental Healthcare Act, 2017 protects rights of persons with mental illness.",
+    "penalties": "Violation of epidemic control measures attracts punishment under Section 188 IPC. Obstruction of public health officers attracts imprisonment up to 1 year.",
+    "helpful_links": ["https://mohfw.gov.in", "https://nhp.gov.in", "https://pmjay.gov.in"],
+    "law": [
+      { "article_number": "2", "article_title": "Power to take special measures against epidemic disease" },
+      { "article_number": "4", "article_title": "Penalty for disobedience" },
+      { "article_number": "3", "article_title": "Persons acting under this act protected" }
+    ]
+  },
+  {
+    "keyword": "data protection",
+    "aliases": ["privacy", "personal data", "cyber security", "data breach", "GDPR", "data privacy", "information security", "surveillance", "hacking", "phishing", "identity theft"],
+    "title": "Information Technology Act & Data Protection Rules",
+    "summary": "If you handle personal data, ensure you use secure practices to protect it from unauthorized access. Follow rules to keep data safe and private.",
+    "full_description": "The Information Technology Act, 2000 and IT (Amendment) Act, 2008 govern cybercrime and data protection in India. The Digital Personal Data Protection Act, 2023 provides comprehensive framework for processing personal data with data principals' consent.",
+    "penalties": "Data breach causing wrongful loss attracts compensation up to INR 5 crore. Hacking attracts imprisonment up to 3 years and/or fine up to INR 5 lakh.",
+    "helpful_links": ["https://meity.gov.in", "https://cert-in.org.in"],
+    "law": [
+      { "article_number": "43A", "article_title": "Compensation for failure to protect data" },
+      { "article_number": "66", "article_title": "Computer related offences" },
+      { "article_number": "72", "article_title": "Penalty for breach of confidentiality and privacy" },
+      { "article_number": "3", "article_title": "Sensitive personal data or information" }
+    ]
+  },
+  {
+    "keyword": "property",
+    "aliases": ["land", "real estate", "house purchase", "flat", "sale deed", "registry", "stamp duty", "mutation", "encroachment", "inheritance", "will", "succession", "RERA", "builder"],
+    "title": "Transfer of Property Act",
+    "summary": "When buying or selling property, ensure the transfer is legally documented and fair. Follow procedures for registration and ensure all rights and responsibilities are clear.",
+    "full_description": "The Transfer of Property Act, 1882 governs sale, mortgage, lease, gift, and exchange of property. Registration of property is mandatory under the Registration Act, 1908. RERA (Real Estate Regulation and Development Act, 2016) protects homebuyers from builder fraud.",
+    "penalties": "Unregistered property transfer is inadmissible as evidence. RERA violations attract fine up to 10% of project cost. Builder fraud attracts imprisonment up to 3 years.",
+    "helpful_links": ["https://rera.karnataka.gov.in", "https://maharerait.mahaonline.gov.in"],
+    "law": [
+      { "article_number": "54", "article_title": "Sale defined" },
+      { "article_number": "58", "article_title": "Mortgage defined" },
+      { "article_number": "107", "article_title": "Lease how made" },
+      { "article_number": "122", "article_title": "Gift defined" }
+    ]
+  },
+  {
+    "keyword": "bankruptcy",
+    "aliases": ["insolvency", "debt", "loan default", "NPA", "creditor", "liquidation", "IBC", "NCLT", "financial distress", "debt restructuring", "corporate insolvency"],
+    "title": "Insolvency and Bankruptcy Code",
+    "summary": "If facing financial difficulties, this code helps you through debt recovery or liquidation processes. It provides a structured way to resolve insolvency issues.",
+    "full_description": "The Insolvency and Bankruptcy Code (IBC), 2016 provides a time-bound process for resolving insolvency of individuals, partnership firms, and corporates. The Corporate Insolvency Resolution Process (CIRP) must be completed within 330 days. Cases are adjudicated by NCLT (National Company Law Tribunal).",
+    "penalties": "Fraudulent transactions before insolvency attract imprisonment up to 5 years. Concealment of property attracts imprisonment up to 5 years and fine.",
+    "helpful_links": ["https://ibbi.gov.in", "https://nclt.gov.in"],
+    "law": [
+      { "article_number": "6", "article_title": "Persons who may initiate corporate insolvency resolution process" },
+      { "article_number": "7", "article_title": "Initiation by financial creditor" },
+      { "article_number": "33", "article_title": "Initiation of liquidation" },
+      { "article_number": "66", "article_title": "Fraudulent or wrongful trading" }
+    ]
+  },
+  {
+    "keyword": "criminal law",
+    "aliases": ["FIR", "police complaint", "bail", "arrest", "murder", "theft", "robbery", "assault", "crime", "IPC", "CRPC", "punishment", "imprisonment", "chargesheet", "trial"],
+    "title": "Indian Penal Code (Bharatiya Nyaya Sanhita)",
+    "summary": "This code outlines what constitutes a crime and the punishments for various offenses. Understand the laws to avoid legal trouble and ensure justice.",
+    "full_description": "The Indian Penal Code, 1860 (now replaced by Bharatiya Nyaya Sanhita, 2023) defines offenses and prescribes punishments. The Code of Criminal Procedure (now Bharatiya Nagarik Suraksha Sanhita) governs the procedure for investigation, trial, and sentencing. Every citizen has the right to file an FIR.",
+    "penalties": "Varies by offense: murder attracts death penalty or life imprisonment; theft attracts imprisonment up to 3 years; cheating up to 7 years.",
+    "helpful_links": ["https://indiankanoon.org", "https://doj.gov.in"],
+    "law": [
+      { "article_number": "299", "article_title": "Culpable homicide" },
+      { "article_number": "375", "article_title": "Rape" },
+      { "article_number": "378", "article_title": "Theft" },
+      { "article_number": "420", "article_title": "Cheating and dishonestly inducing delivery of property" }
+    ]
+  },
+  {
+    "keyword": "contract",
+    "aliases": ["agreement", "MOU", "deed", "breach of contract", "legal agreement", "terms and conditions", "service agreement", "business contract", "offer acceptance", "consideration"],
+    "title": "Indian Contract Act",
+    "summary": "When entering into agreements, make sure they are valid and fair. The act provides guidelines on forming and enforcing contracts to protect both parties involved.",
+    "full_description": "The Indian Contract Act, 1872 governs all contracts in India. A valid contract requires offer, acceptance, consideration, free consent, lawful object, and competent parties. Minors, persons of unsound mind, and persons disqualified by law cannot enter valid contracts.",
+    "penalties": "Breach of contract entitles the aggrieved party to damages, specific performance, or injunction. Courts can award compensation for losses including lost profits.",
+    "helpful_links": ["https://indiankanoon.org", "https://doj.gov.in"],
+    "law": [
+      { "article_number": "10", "article_title": "What agreements are contracts" },
+      { "article_number": "23", "article_title": "What considerations and objects are lawful" },
+      { "article_number": "73", "article_title": "Compensation for loss or damage" },
+      { "article_number": "74", "article_title": "Compensation for breach of contract where penalty stipulated" }
+    ]
+  },
+  {
+    "keyword": "environment",
+    "aliases": ["pollution", "deforestation", "wildlife", "forest", "water pollution", "air quality", "noise pollution", "plastic ban", "waste management", "green tribunal", "NGT", "factory pollution"],
+    "title": "Environment Protection Act",
+    "summary": "Follow rules to protect the environment. This includes proper waste disposal and pollution control to ensure a clean and safe environment for everyone.",
+    "full_description": "The Environment Protection Act, 1986 is an umbrella legislation for environmental protection in India. It works alongside the Water Act (1974), Air Act (1981), and Forest Conservation Act (1980). The National Green Tribunal (NGT) handles environmental cases expeditiously.",
+    "penalties": "Violations attract imprisonment up to 5 years and/or fine up to INR 1 lakh per day of violation. Repeat offenses attract imprisonment up to 7 years.",
+    "helpful_links": ["https://moef.gov.in", "https://cpcb.nic.in", "https://greentribunal.gov.in"],
+    "law": [
+      { "article_number": "3", "article_title": "Power of Central Government to protect environment" },
+      { "article_number": "7", "article_title": "Persons not to allow emission beyond standards" },
+      { "article_number": "15", "article_title": "Penalty for contravention of provisions" }
+    ]
+  },
+  {
+    "keyword": "labour",
+    "aliases": ["worker rights", "factory", "minimum wage", "overtime", "working hours", "occupational safety", "labor law", "construction workers", "bonded labor", "child labor", "ESIC", "PF"],
+    "title": "Factories Act & Labour Laws",
+    "summary": "In workplaces, ensure safety standards and health regulations are met. The act provides guidelines to protect workers rights and ensure safe working conditions.",
+    "full_description": "The Factories Act, 1948 regulates working conditions in factories including working hours (max 48 hours/week), safety measures, health provisions, and welfare facilities. The Labour Codes (2019-2020) consolidate 44 central labour laws into 4 codes: Wages, Industrial Relations, Social Security, and Occupational Safety.",
+    "penalties": "Employing child labor attracts imprisonment 6 months to 2 years and fine. Violation of safety norms attracts imprisonment up to 2 years and fine up to INR 1 lakh.",
+    "helpful_links": ["https://labour.gov.in", "https://clc.gov.in"],
+    "law": [
+      { "article_number": "6", "article_title": "Approval, licensing and registration of factories" },
+      { "article_number": "51", "article_title": "Weekly hours" },
+      { "article_number": "59", "article_title": "Extra wages for overtime" },
+      { "article_number": "111A", "article_title": "Right of workers to take up membership of a trade union" }
+    ]
+  },
+  {
+    "keyword": "income tax",
+    "aliases": ["ITR", "tax return", "TDS", "tax deduction", "salary tax", "capital gains", "tax exemption", "80C", "direct tax", "assessment", "PAN", "tax refund", "self assessment"],
+    "title": "Income Tax Act",
+    "summary": "Every individual earning above the basic exemption limit must file income tax returns annually. The act provides for deductions and exemptions to reduce your tax liability.",
+    "full_description": "The Income Tax Act, 1961 governs taxation of income of individuals, HUFs, firms, and companies. Tax is levied on various heads: salary, house property, business, capital gains, and other sources. The new tax regime (from FY 2023-24) offers lower rates without deductions. ITR must be filed by July 31 each year.",
+    "penalties": "Late filing attracts penalty up to INR 10,000. Tax evasion attracts fine from 100% to 300% of tax evaded plus imprisonment up to 7 years.",
+    "helpful_links": ["https://incometax.gov.in", "https://eportal.incometax.gov.in"],
+    "law": [
+      { "article_number": "10", "article_title": "Incomes not included in total income (exemptions)" },
+      { "article_number": "80C", "article_title": "Deduction in respect of life insurance, PPF etc." },
+      { "article_number": "139", "article_title": "Return of income" },
+      { "article_number": "271", "article_title": "Failure to furnish returns, comply with notices" }
+    ]
+  },
+  {
+    "keyword": "women rights",
+    "aliases": ["sexual harassment", "POSH", "workplace harassment", "maternity benefit", "equal pay", "domestic violence", "women safety", "rape law", "stalking", "acid attack", "dowry harassment"],
+    "title": "Protection of Women from Domestic Violence Act",
+    "summary": "Women are protected by comprehensive laws against domestic violence, sexual harassment, and discrimination. Strong legal remedies and support systems are available.",
+    "full_description": "The Protection of Women from Domestic Violence Act, 2005 provides civil remedies to victims of domestic violence. The Sexual Harassment of Women at Workplace (Prevention, Prohibition, Redressal) Act, 2013 (POSH) mandates Internal Complaints Committees in every organization with 10+ employees. The Maternity Benefit (Amendment) Act, 2017 provides 26 weeks paid maternity leave.",
+    "penalties": "Domestic violence attracts imprisonment up to 1 year and/or fine up to INR 20,000. Non-compliance with POSH act attracts fine up to INR 50,000.",
+    "helpful_links": ["https://wcd.nic.in", "https://ncw.nic.in", "https://www.icrw.org"],
+    "law": [
+      { "article_number": "3", "article_title": "Definition of domestic violence" },
+      { "article_number": "12", "article_title": "Application to Magistrate" },
+      { "article_number": "18", "article_title": "Protection orders" },
+      { "article_number": "23", "article_title": "Power to grant interim and ex parte orders" }
+    ]
+  },
+  {
+    "keyword": "RTI",
+    "aliases": ["right to information", "government transparency", "public information", "government records", "pio", "information officer", "government accountability", "CIC", "SIC"],
+    "title": "Right to Information Act",
+    "summary": "Every citizen can request information from any government body within 30 days. This act promotes transparency and accountability in public administration.",
+    "full_description": "The Right to Information Act, 2005 empowers citizens to seek information from public authorities within 30 days. The Central Information Commission (CIC) and State Information Commissions (SICs) are appellate authorities. Certain exemptions apply to national security, personal privacy, and third-party commercial interests.",
+    "penalties": "Failure to provide information without reasonable cause attracts penalty of INR 250 per day up to INR 25,000. Disciplinary action can also be taken against defaulting officers.",
+    "helpful_links": ["https://rti.gov.in", "https://cic.gov.in"],
+    "law": [
+      { "article_number": "6", "article_title": "Request for obtaining information" },
+      { "article_number": "7", "article_title": "Disposal of request" },
+      { "article_number": "8", "article_title": "Exemption from disclosure of information" },
+      { "article_number": "20", "article_title": "Penalties" }
+    ]
+  },
+  {
+    "keyword": "cyber crime",
+    "aliases": ["online fraud", "cyber fraud", "social media crime", "fake news", "defamation online", "cyberbullying", "ransomware", "online cheating", "UPI fraud", "phishing", "email fraud"],
+    "title": "Information Technology Act (Cyber Crimes)",
+    "summary": "Cyber crimes including hacking, online fraud, and data theft are serious offenses. Report cyber crimes immediately to the Cyber Crime Cell or online portal.",
+    "full_description": "The IT Act, 2000 and its amendments define various cyber offenses including unauthorized access, data theft, identity theft, cyber terrorism, and publishing obscene material. The National Cyber Crime Reporting Portal allows victims to report cyber crimes online. Cyber cells operate in all major cities.",
+    "penalties": "Hacking attracts imprisonment up to 3 years. Identity theft attracts imprisonment up to 3 years. Cyber terrorism attracts imprisonment for life.",
+    "helpful_links": ["https://cybercrime.gov.in", "https://cert-in.org.in"],
+    "law": [
+      { "article_number": "43", "article_title": "Penalty for damage to computer systems" },
+      { "article_number": "66", "article_title": "Computer related offences" },
+      { "article_number": "66C", "article_title": "Punishment for identity theft" },
+      { "article_number": "66F", "article_title": "Punishment for cyber terrorism" }
+    ]
+  },
+  {
+    "keyword": "election",
+    "aliases": ["voting", "voter ID", "election commission", "candidate", "political party", "model code of conduct", "electoral bond", "democracy", "constituency", "EC"],
+    "title": "Representation of the People Act",
+    "summary": "This act regulates elections in India, ensuring free and fair voting. Know your rights as a voter to participate in democracy effectively.",
+    "full_description": "The Representation of the People Act, 1950 and 1951 governs elections to Parliament and State Legislatures. The Election Commission of India (ECI) is an independent constitutional body that supervises elections. Every citizen above 18 years has the right to vote. Voter ID (EPIC) is the primary voter identification document.",
+    "penalties": "Booth capturing attracts imprisonment up to 3 years. Bribery for votes attracts imprisonment up to 2 years. Filing false nomination attracts disqualification.",
+    "helpful_links": ["https://eci.gov.in", "https://nvsp.in"],
+    "law": [
+      { "article_number": "19", "article_title": "Preparation of electoral rolls" },
+      { "article_number": "62", "article_title": "Right to vote" },
+      { "article_number": "123", "article_title": "Corrupt practices" },
+      { "article_number": "171B", "article_title": "Bribery" }
+    ]
+  },
+  {
+    "keyword": "banking",
+    "aliases": ["bank account", "loan", "EMI", "credit card", "cheque bounce", "UPI", "NEFT", "RBI", "banking fraud", "fixed deposit", "savings account", "NBFC", "interest rate"],
+    "title": "Banking Regulation Act & RBI Guidelines",
+    "summary": "Banks in India are regulated by the Reserve Bank of India. Customers have rights against banking fraud, unfair practices, and can escalate complaints to the Banking Ombudsman.",
+    "full_description": "The Banking Regulation Act, 1949 governs banking companies. The Reserve Bank of India (RBI) regulates all banks. The Banking Ombudsman Scheme provides free grievance redressal. Under SARFAESI Act, 2002, banks can recover non-performing assets without court intervention for loans above INR 1 lakh.",
+    "penalties": "Cheque bounce (dishonor) under Section 138 NI Act attracts imprisonment up to 2 years and/or fine double the cheque amount. Banking fraud attracts stringent punishment under IPC and Prevention of Money Laundering Act.",
+    "helpful_links": ["https://rbi.org.in", "https://bankingombudsman.rbi.org.in"],
+    "law": [
+      { "article_number": "35A", "article_title": "Power of RBI to give directions" },
+      { "article_number": "138", "article_title": "Dishonour of cheque for insufficiency of funds (NI Act)" },
+      { "article_number": "13", "article_title": "Enforcement of security interest (SARFAESI)" },
+      { "article_number": "46", "article_title": "Penalties for banking violations" }
+    ]
+  },
+  {
+    "keyword": "child rights",
+    "aliases": ["child abuse", "juvenile", "POCSO", "child trafficking", "child marriage", "orphan", "adoption", "child labor", "guardianship", "CARA", "CWC", "juvenile justice"],
+    "title": "Juvenile Justice Act & POCSO",
+    "summary": "Children have special legal protections. Child abuse, trafficking, and exploitation are serious criminal offenses with stringent punishment.",
+    "full_description": "The Juvenile Justice (Care and Protection of Children) Act, 2015 governs care and protection of children in need and juveniles in conflict with law. The Protection of Children from Sexual Offences (POCSO) Act, 2012 provides stringent punishment for sexual offenses against minors. Child and Adolescent Labour (Prohibition and Regulation) Act, 1986 bans child labor.",
+    "penalties": "POCSO offenses attract imprisonment from 3 years to life. Child marriage attracts imprisonment up to 2 years. Child labor offenses attract imprisonment 6 months to 2 years.",
+    "helpful_links": ["https://wcd.nic.in", "https://cara.nic.in", "https://ncpcr.gov.in"],
+    "law": [
+      { "article_number": "4", "article_title": "Aggravated Penetrative Sexual Assault (POCSO)" },
+      { "article_number": "19", "article_title": "Reporting of offences (POCSO)" },
+      { "article_number": "15", "article_title": "Preliminary assessment for heinous offences (JJ Act)" },
+      { "article_number": "74", "article_title": "Child Care institutions (JJ Act)" }
+    ]
+  },
+  {
+    "keyword": "startup",
+    "aliases": ["entrepreneur", "funding", "angel investor", "VC", "venture capital", "seed funding", "DPIIT", "startup India", "incubator", "accelerator", "ESOP", "equity"],
+    "title": "Startup India & DPIIT Recognition",
+    "summary": "India has a supportive startup ecosystem with tax benefits, simplified compliance, and funding access for recognized startups under the Startup India scheme.",
+    "full_description": "Startup India, launched in 2016, provides recognized startups with tax exemptions for 3 years, self-certification under labor and environmental laws, fast-track patent applications, and access to INR 10,000 crore Fund of Funds. Startups must be incorporated as private limited company, LLP or registered partnership and registered with DPIIT.",
+    "penalties": "Startups enjoy relaxed compliance norms. However, SEBI regulations apply if raising public funds. Violations of company law norms attract standard Companies Act penalties.",
+    "helpful_links": ["https://startupindia.gov.in", "https://dpiit.gov.in"],
+    "law": [
+      { "article_number": "80IAC", "article_title": "Tax exemption for eligible startups (Income Tax Act)" },
+      { "article_number": "54EE", "article_title": "Capital gains exemption for startup investment" },
+      { "article_number": "3", "article_title": "Formation of company (Companies Act)" }
+    ]
+  }
+]

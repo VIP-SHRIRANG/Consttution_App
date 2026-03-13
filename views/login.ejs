@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FindYourLaw.com — Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Translate Script -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <style>
+    /* ─── Variables ──────────────────────────────── */
+    :root {
+      --bg:         #0b0d11;
+      --bg-2:       #10131a;
+      --surface:    rgba(255,255,255,0.035);
+      --surface-2:  rgba(255,255,255,0.055);
+      --border:     rgba(255,255,255,0.07);
+      --border-h:   rgba(201,169,110,0.4);
+      --gold:       #c9a96e;
+      --gold-light: #e2c98a;
+      --text:       #ede7db;
+      --text-muted: rgba(237,231,219,0.45);
+      --nav-bg:     rgba(11,13,17,0.92);
+      --error:      #e07070;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* ─── Background ─────────────────────────────── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% -5%, rgba(201,169,110,0.09) 0%, transparent 65%),
+        radial-gradient(ellipse 35% 30% at 95% 95%, rgba(122,40,40,0.06) 0%, transparent 55%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ─── Header ─────────────────────────────────── */
+    .header-container {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--nav-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2.5rem;
+      height: 64px;
+      z-index: 1000;
+    }
+
+    .header-container::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), transparent);
+      opacity: 0.4;
+    }
+
+    .logo h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: var(--text);
+    }
+
+    .logo h2::first-letter { color: var(--gold); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.1rem;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.85rem;
+      border-radius: 4px;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .translate-box { flex-shrink: 0; }
+
+    #google_translate_element select {
+      background: var(--bg-2);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 11px;
+      font-family: 'DM Sans', sans-serif;
+      outline: none;
+    }
+
+    /* ─── Wrapper / Layout ───────────────────────── */
+    .wrapper {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 1.5rem 90px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ─── Form Card ──────────────────────────────── */
+    .form-box {
+      width: 100%;
+      max-width: 420px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 2.75rem 2.5rem 2.25rem;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      animation: cardIn 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    @keyframes cardIn {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Decorative top accent */
+    .form-box::before {
+      content: '';
+      display: block;
+      width: 2.5rem;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      margin: 0 auto 1.5rem;
+      border-radius: 2px;
+    }
+
+    /* ─── Form Heading ───────────────────────────── */
+    #h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      font-style: italic;
+      text-align: center;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.02em;
+    }
+
+    .form-eyebrow {
+      text-align: center;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.7;
+      margin-bottom: 2rem;
+    }
+
+    /* ─── Input Boxes ────────────────────────────── */
+    .input-box {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+
+    .input-box input {
+      width: 100%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 300;
+      padding: 0.85rem 2.75rem 0.85rem 1rem;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+    }
+
+    .input-box input::placeholder { color: var(--text-muted); }
+
+    .input-box input:focus {
+      border-color: var(--border-h);
+      background: rgba(255,255,255,0.07);
+      box-shadow: 0 0 0 3px rgba(201,169,110,0.07);
+    }
+
+    .input-box .icon {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      pointer-events: none;
+      transition: color 0.2s;
+    }
+
+    .input-box input:focus + .icon { color: var(--gold); }
+
+    /* ─── Extra Options ──────────────────────────── */
+    .extra-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      margin-top: 0.25rem;
+    }
+
+    .extra-options label {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .extra-options input[type="checkbox"] {
+      accent-color: var(--gold);
+      width: 13px;
+      height: 13px;
+    }
+
+    .forgot-password {
+      font-size: 0.78rem;
+      color: var(--gold);
+      text-decoration: none;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+
+    .forgot-password:hover { opacity: 1; }
+
+    /* ─── Submit Button ──────────────────────────── */
+    button[type="submit"] {
+      width: 100%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: #0b0d11;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      padding: 0.88rem 2rem;
+      transition: transform 0.15s, box-shadow 0.2s, opacity 0.2s;
+    }
+
+    button[type="submit"]:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 26px rgba(201,169,110,0.28);
+    }
+
+    button[type="submit"]:active { transform: translateY(0); }
+
+    /* ─── Divider ────────────────────────────────── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.25rem 0;
+    }
+
+    /* ─── Google Button ──────────────────────────── */
+    .google-btn {
+      width: 100%;
+      background: var(--surface-2);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      padding: 0.82rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    }
+
+    .google-btn i {
+      font-size: 1rem;
+      color: #e07070;
+    }
+
+    .google-btn:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(255,255,255,0.14);
+      transform: translateY(-1px);
+    }
+
+    /* ─── Sign Up Link ───────────────────────────── */
+    #h6 {
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      margin-top: 1.5rem;
+    }
+
+    #h6 a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 400;
+      transition: opacity 0.2s;
+    }
+
+    #h6 a:hover { opacity: 0.8; }
+
+    /* ─── Footer ─────────────────────────────────── */
+    .footer {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: var(--nav-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-top: 1px solid var(--border);
+      padding: 0.7rem 2rem;
+      text-align: center;
+      z-index: 100;
+    }
+
+    .footer p {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      opacity: 0.6;
+    }
+
+    /* ─── Responsive ─────────────────────────────── */
+    @media (max-width: 600px) {
+      .header-container { padding: 0 1.25rem; }
+      .nav-links a { font-size: 0.72rem; padding: 0.35rem 0.5rem; }
+      .form-box { padding: 2rem 1.5rem 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────── -->
+  <header class="header-container">
+    <div class="logo">
+      <h2>FindYourLaw.com</h2>
+    </div>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/contactus">Contact Us</a>
+      <a href="/help">Help</a>
+    </nav>
+    <div id="google_translate_element" class="translate-box"></div>
+  </header>
+
+  <!-- ── Login Card ─────────────────────────── -->
+  <div class="wrapper">
+    <div class="form-box login">
+      <form action="/authentication" method="post">
+
+        <h1 id="h1">Welcome back</h1>
+        <p class="form-eyebrow">Sign in to continue</p>
+
+        <div class="input-box">
+          <input type="text" placeholder="Username" name="username" required>
+          <i class="fas fa-user icon"></i>
+        </div>
+
+        <div class="input-box">
+          <input type="password" placeholder="Password" name="password" required>
+          <i class="fas fa-lock icon"></i>
+        </div>
+
+        <div class="extra-options">
+          <label>
+            <input type="checkbox"> Remember Me
+          </label>
+          <a href="/forgot-password" class="forgot-password">Forgot password?</a>
+        </div>
+
+        <button type="submit">Login</button>
+
+        <hr />
+
+        <button type="button" class="google-btn" onclick="window.location.href='/auth/google'">
+          <i class="fab fa-google"></i> Continue with Google
+        </button>
+
+      </form>
+
+      <h6 id="h6">
+        Don't have an account? <a href="/register">Sign Up</a>
+      </h6>
+    </div>
+  </div>
+
+  <!-- ── Footer ─────────────────────────────── -->
+  <footer class="footer">
+    <p>© 2024 FindYourLaw.com — All Rights Reserved &nbsp;|&nbsp; Made with ❤️ in India</p>
+  </footer>
+
+</body>
+</html>
