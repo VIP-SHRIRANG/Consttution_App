@@ -139,7 +139,7 @@ async function googleSearch(query) {
 app.get('/',             (req, res) => res.sendFile(path.join(__dirname, 'views', 'index.html')));
 app.get('/login',        (req, res) => res.render('login'));
 app.get('/register',     (req, res) => res.render('register'));
-app.get('/about',        (req, res) => res.render('about'));
+app.get('/aboutus',        (req, res) => res.render('about'));
 app.get('/contactus',    (req, res) => res.render('contactus'));
 app.get('/help',         (req, res) => res.render('help'));
 app.get('/simple',       (req, res) => res.render('simple'));
