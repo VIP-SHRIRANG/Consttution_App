@@ -150,21 +150,21 @@ app.get('/dashboard',    (req, res) => res.render('approach'));
 // ─────────────────────────────────────────────
 // Auth Routes
 // ─────────────────────────────────────────────
-app.post('/approach', async (req, res) => {
+app.post('/register-userType', async (req, res) => {
   try {
     const { username, password } = req.body;
     if (!username || !password)
       return res.render('error', { message: 'Username and password are required.' });
     const data = await dbConnection();
     await data.insertOne({ username, password });
-    res.render('approach');
+    res.redirect('/dashboard');
   } catch (err) {
     console.error('[REGISTER ERROR]', err);
     res.render('error', { message: 'Registration failed. Please try again.' });
   }
 });
 
-app.post('/authentication', async (req, res) => {
+app.post('/login-userType', async (req, res) => {
   try {
     const { username, password } = req.body;
     const data = await dbConnection();

@@ -4,6 +4,8 @@ const { MongoClient } = require('mongodb');
 
 const url = process.env.MONGODB_URI;
 const client = new MongoClient(url);
+//Sanity check
+console.log('URI loaded:', process.env.MONGODB_URI ? 'yes' : 'NO - undefined');
 
 const databaseName = 'Constitution_App';
 
